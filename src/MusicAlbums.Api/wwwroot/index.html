@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MusicAlbums</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="dot" id="health-dot" title="API health"></span>
+      <h1>MusicAlbums</h1>
+      <span class="tagline">per-user album library &middot; Deezer + Spotify provider strategies</span>
+    </div>
+    <div class="controls">
+      <label>Provider
+        <select id="provider"></select>
+      </label>
+      <label>User
+        <input id="user" value="demo" spellcheck="false" autocomplete="off" />
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <form id="search-form" autocomplete="off">
+        <input id="query" placeholder="Search albums by name or artist&hellip; try &quot;daft punk&quot;" />
+        <button type="submit">Search</button>
+      </form>
+      <p id="search-status" class="status"></p>
+      <div id="results" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Library</h2>
+        <button id="refresh" class="ghost">Refresh</button>
+      </div>
+      <p id="library-status" class="status"></p>
+      <div id="library" class="grid"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
