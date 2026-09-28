@@ -5,6 +5,7 @@
     <Project Path="src/MusicAlbums.Infrastructure/MusicAlbums.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/MusicAlbums.ApiTests/MusicAlbums.ApiTests.csproj" />
     <Project Path="tests/MusicAlbums.Tests/MusicAlbums.Tests.csproj" />
     <Project Path="tests/MusicAlbums.TestSupport/MusicAlbums.TestSupport.csproj" />
   </Folder>
