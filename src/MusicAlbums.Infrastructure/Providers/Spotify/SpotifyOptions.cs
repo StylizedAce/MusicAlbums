@@ -13,4 +13,6 @@ public sealed class SpotifyOptions
     public string AccountsBaseUrl { get; set; } = "https://accounts.spotify.com/";
 
     public string ApiBaseUrl { get; set; } = "https://api.spotify.com/v1/";
+
+    public int TimeoutSeconds { get; set; } = 15;
 }

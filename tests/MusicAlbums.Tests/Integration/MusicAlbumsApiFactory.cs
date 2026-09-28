@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using MusicAlbums.Infrastructure.Persistence;
 using MusicAlbums.Infrastructure.Providers.Deezer;
+using MusicAlbums.Infrastructure.Providers.Spotify;
 using MusicAlbums.Tests.Support;
 
 namespace MusicAlbums.Tests.Integration;
@@ -19,9 +20,15 @@ public sealed class MusicAlbumsApiFactory : WebApplicationFactory<Program>
     {
         _connection.Open();
         DeezerHandler = new StubHttpMessageHandler(DeezerTestData.Respond);
+        SpotifyAccountsHandler = new StubHttpMessageHandler(_ => SpotifyTestData.Json(SpotifyTestData.TokenJson));
+        SpotifyApiHandler = new StubHttpMessageHandler(SpotifyTestData.Respond);
     }
 
     public StubHttpMessageHandler DeezerHandler { get; }
+
+    public StubHttpMessageHandler SpotifyAccountsHandler { get; }
+
+    public StubHttpMessageHandler SpotifyApiHandler { get; }
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
@@ -35,6 +42,10 @@ public sealed class MusicAlbumsApiFactory : WebApplicationFactory<Program>
 
             services.AddHttpClient<DeezerAlbumProvider>()
                 .ConfigurePrimaryHttpMessageHandler(() => DeezerHandler);
+            services.AddHttpClient(SpotifyHttpClients.Accounts)
+                .ConfigurePrimaryHttpMessageHandler(() => SpotifyAccountsHandler);
+            services.AddHttpClient<SpotifyAlbumProvider>()
+                .ConfigurePrimaryHttpMessageHandler(() => SpotifyApiHandler);
         });
     }
 

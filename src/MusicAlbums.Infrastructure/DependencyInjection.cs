@@ -41,6 +41,7 @@ public static class DependencyInjection
             .Validate(options => options.Mode != SpotifyProviderMode.Api
                 || (!string.IsNullOrWhiteSpace(options.ClientId) && !string.IsNullOrWhiteSpace(options.ClientSecret)),
                 "AlbumProviders:Spotify:ClientId and ClientSecret are required when Mode is 'Api'.")
+            .Validate(options => options.TimeoutSeconds > 0, "AlbumProviders:Spotify:TimeoutSeconds must be positive.")
             .ValidateOnStart();
 
         services.AddHttpClient<DeezerAlbumProvider>((serviceProvider, client) =>
@@ -52,6 +53,22 @@ public static class DependencyInjection
 
         services.AddTransient<IAlbumProvider>(serviceProvider => serviceProvider.GetRequiredService<DeezerAlbumProvider>());
 
+        services.AddHttpClient(SpotifyHttpClients.Accounts, (serviceProvider, client) =>
+        {
+            var options = serviceProvider.GetRequiredService<IOptions<SpotifyOptions>>().Value;
+            client.BaseAddress = new Uri(options.AccountsBaseUrl);
+            client.Timeout = TimeSpan.FromSeconds(options.TimeoutSeconds);
+        });
+
+        services.AddHttpClient<SpotifyAlbumProvider>((serviceProvider, client) =>
+        {
+            var options = serviceProvider.GetRequiredService<IOptions<SpotifyOptions>>().Value;
+            client.BaseAddress = new Uri(options.ApiBaseUrl);
+            client.Timeout = TimeSpan.FromSeconds(options.TimeoutSeconds);
+        });
+
+        services.AddSingleton<ISpotifyTokenProvider, SpotifyTokenProvider>();
+
         var spotifyOptions = configuration.GetSection(SpotifyOptions.SectionName).Get<SpotifyOptions>() ?? new SpotifyOptions();
 
         if (spotifyOptions.Mode == SpotifyProviderMode.Fake)
@@ -60,8 +77,7 @@ public static class DependencyInjection
         }
         else
         {
-            throw new InvalidOperationException(
-                "AlbumProviders:Spotify:Mode=Api is not implemented yet and arrives in V3. Set Mode=Fake or wait for the real Spotify adapter.");
+            services.AddTransient<IAlbumProvider>(serviceProvider => serviceProvider.GetRequiredService<SpotifyAlbumProvider>());
         }
 
         services.AddTransient<IAlbumProviderFactory, AlbumProviderFactory>();

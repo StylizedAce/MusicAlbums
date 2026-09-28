@@ -4,9 +4,15 @@ public sealed class StubHttpMessageHandler(Func<HttpRequestMessage, HttpResponse
 {
     public List<HttpRequestMessage> Requests { get; } = [];
 
-    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+    public List<string> RequestBodies { get; } = [];
+
+    protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
     {
         Requests.Add(request);
-        return Task.FromResult(responder(request));
+        RequestBodies.Add(request.Content is null
+            ? string.Empty
+            : await request.Content.ReadAsStringAsync(cancellationToken));
+
+        return responder(request);
     }
 }
