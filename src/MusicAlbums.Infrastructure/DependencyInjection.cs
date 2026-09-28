@@ -20,7 +20,7 @@ public static class DependencyInjection
             ?? throw new InvalidOperationException("Connection string 'Library' is not configured.");
 
         services.AddDbContext<MusicAlbumsDbContext>(options => options.UseSqlite(connectionString));
-        services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<MusicAlbumsDbContext>());
+        services.AddScoped<IUnitOfWork>(serviceProvider => new TranslatingUnitOfWork(serviceProvider.GetRequiredService<MusicAlbumsDbContext>()));
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<ISavedAlbumRepository, SavedAlbumRepository>();
 

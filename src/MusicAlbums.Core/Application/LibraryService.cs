@@ -19,14 +19,9 @@ public sealed class LibraryService(
         var provider = ResolveProvider(providerName);
         var normalizedUserName = userName.Trim();
 
-        var user = await userRepository.FindByNameAsync(normalizedUserName, cancellationToken);
-        if (user is null)
-        {
-            user = new User { Name = normalizedUserName };
-            userRepository.Add(user);
-        }
-
         var providerAlbum = await provider.GetAlbumAsync(providerAlbumId, cancellationToken);
+
+        var user = await userRepository.GetOrCreateAsync(normalizedUserName, cancellationToken);
 
         if (await savedAlbumRepository.ExistsAsync(user.Id, provider.Name, providerAlbum.ProviderAlbumId, cancellationToken))
         {

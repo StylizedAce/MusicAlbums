@@ -6,5 +6,5 @@ public interface IUserRepository
 {
     Task<User?> FindByNameAsync(string name, CancellationToken cancellationToken = default);
 
-    void Add(User user);
+    Task<User> GetOrCreateAsync(string name, CancellationToken cancellationToken = default);
 }
