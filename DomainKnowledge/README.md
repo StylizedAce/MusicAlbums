@@ -16,8 +16,13 @@ between sessions. Update it whenever a meaningful decision changes.
 | [06-testing-strategy.md](06-testing-strategy.md) | What is tested where, how to run, live smoke test |
 | [07-decision-log.md](07-decision-log.md) | Running log of decisions and their rationale |
 | [08-docker.md](08-docker.md) | Container image, compose stack, secrets and run guide |
+| [09-deployment.md](09-deployment.md) | Deployment levels (local/Docker/K8s) and secrets layering |
+| [10-code-walkthrough.md](10-code-walkthrough.md) | End-to-end code walkthrough: request flow, patterns, traces |
 | [verification/V1-verification.md](verification/V1-verification.md) | V1 test evidence: 27/27 automated + live Deezer E2E |
 | [verification/V2-verification.md](verification/V2-verification.md) | V2 test evidence: 30/30 automated + native/container E2E |
+| [verification/V3-verification.md](verification/V3-verification.md) | V3 test evidence: album URLs + Spotify adapter + policy notes |
+| [verification/V4-verification.md](verification/V4-verification.md) | V4 test evidence: Reqnroll BDD acceptance suite |
+| [verification/V5-verification.md](verification/V5-verification.md) | V5 test evidence: Kubernetes E2E incl. PVC persistence |
 
 ## Ground rules captured here
 

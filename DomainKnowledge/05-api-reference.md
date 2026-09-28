@@ -54,8 +54,22 @@ Invoke-RestMethod "http://localhost:5080/api/users/alice/library"
 }
 ```
 
-`SavedAlbumResponse` adds `id` (GUID, used for delete/get) and `savedAt`, and its
-`tracks` array is populated from the provider detail call.
+`SavedAlbumResponse` adds `id` (GUID, used for delete/get), `savedAt` and
+`externalUrl` (provider page), and its `tracks` array is populated from the
+provider detail call. Each track carries `previewUrl` when the provider exposes a
+30-second preview (Deezer does; Spotify often returns null).
+
+## Demo frontend
+
+`GET /` serves a single-page demo UI from `wwwroot` (same origin, no CORS):
+provider selector, search, save/remove, expandable tracklists with preview
+playback and provider links. It ships inside the API container and the
+Kubernetes deployment - no separate web container.
+
+## Acceptance tests
+
+`tests/MusicAlbums.ApiTests` (Reqnroll/Gherkin) covers these endpoints over the
+real HTTP pipeline with deterministic provider transports; run with `dotnet test`.
 
 ## Error mapping
 

@@ -13,6 +13,8 @@
 
 - Build stage copies `Directory.Build.props` + project files first so `dotnet restore`
   is cached; source is copied afterwards.
+- The demo frontend lives in `wwwroot` and is served by the API at `/`; there is no
+  separate web container.
 - Runtime stage:
   - `curl` installed for the container healthcheck (`curl -fsS http://localhost:8080/health/live`).
   - Runs as the non-root `app` user.

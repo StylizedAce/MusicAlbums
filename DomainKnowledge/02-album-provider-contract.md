@@ -52,9 +52,9 @@ required. `GET /api/providers` automatically lists the new provider.
 | Provider | Status | Notes |
 | --- | --- | --- |
 | `deezer` | Real | Public REST API, no credentials (see 03-deezer-integration.md) |
-| `spotify` | Fake, switch ready | `FakeSpotifyAlbumProvider` behind `AlbumProviders:Spotify:Mode`; real adapter in V3 |
+| `spotify` | Real + Fake | Real adapter with client-credentials token cache; the fake serves deterministic demos/tests; selected by `AlbumProviders:Spotify:Mode` |
 
-## Spotify provider mode switch (V2)
+## Spotify provider mode switch
 
 Configuration (`AlbumProviders:Spotify`):
 
@@ -62,39 +62,34 @@ Configuration (`AlbumProviders:Spotify`):
 {
   "Mode": "Fake",
   "AccountsBaseUrl": "https://accounts.spotify.com/",
-  "ApiBaseUrl": "https://api.spotify.com/v1/"
+  "ApiBaseUrl": "https://api.spotify.com/v1/",
+  "TimeoutSeconds": 15
 }
 ```
 
-- `Mode=Fake` (default): the deterministic in-memory catalogue serves requests.
-  Credentials are not required.
-- `Mode=Api`: startup validation requires `ClientId`/`ClientSecret`, and then the
-  app **fails fast** with a clear message - the real adapter arrives in V3. There
-  is deliberately no silent fallback to the fake.
+- `Mode=Fake` (default): the in-memory catalogue serves requests; no credentials.
+- `Mode=Api`: the real adapter is registered and startup validation requires
+  `ClientId`/`ClientSecret`. Requests acquire a cached token (client credentials,
+  refreshed 30 seconds before expiry, single-flight locked).
 
-Credentials never live in git. Local development uses user-secrets on the API
-project (already initialized with a `UserSecretsId`):
+### Spotify policy quirks (February 2026 Dev Mode changes)
 
-```powershell
-dotnet user-secrets set "AlbumProviders:Spotify:ClientId" "<id>" --project src/MusicAlbums.Api
-dotnet user-secrets set "AlbumProviders:Spotify:ClientSecret" "<secret>" --project src/MusicAlbums.Api
-```
+- Search `limit` is capped at **10** for Development Mode apps; the provider clamps.
+- All Development Mode apps require the app owner to have an active **Premium**
+  subscription. Without it, data endpoints return a **bodyless HTTP 403** even
+  though token acquisition succeeds; the provider surfaces an explanatory message.
+- Live verification of the real adapter is currently blocked by account state (see
+  `verification/V3-verification.md`); the adapter is verified end-to-end with the
+  stubbed-transport E2E test instead.
 
-Containers/host: `AlbumProviders__Spotify__ClientId` and
-`AlbumProviders__Spotify__ClientSecret` environment variables (V3 syncs a
-gitignored `.env` through TuxComp).
+Credentials never live in git:
 
-## Spotify roadmap (V3, credentials available)
+- Local dev: user-secrets on `MusicAlbums.Api` (already initialized).
+- Docker/Kubernetes: `AlbumProviders__Spotify__ClientId` / `...__ClientSecret`
+  environment variables (Kubernetes: a Secret, see 09-deployment.md).
 
-Spotify requires OAuth 2.0 **client credentials**:
+## Why the fake provider stays
 
-1. App registration on the Spotify dashboard (already done; copy the secret into
-   user-secrets/env, never into the repo).
-2. Implement the real `SpotifyAlbumProvider` with a typed `HttpClient`:
-   - Token: `POST {AccountsBaseUrl}api/token` with `grant_type=client_credentials`
-     (Basic auth) - cache the token until expiry.
-   - Search: `GET {ApiBaseUrl}search?q={q}&type=album&limit&offset`
-   - Detail: `GET {ApiBaseUrl}albums/{id}`
-3. Replace the fail-fast branch in `DependencyInjection` with the typed-client
-   registration and update the fail-fast test in `SpotifyConfigurationTests`.
-4. Map payloads to `ProviderAlbum`; keep the fake for tests via DI.
+`FakeSpotifyAlbumProvider` is the deterministic fixture for unit and BDD tests
+(no network, stable payloads). Both providers share the same contract, so the
+same features run against either strategy by changing configuration.

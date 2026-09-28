@@ -32,3 +32,11 @@ alternatives considered.
 | 25 | Container runtime: non-root `app`, curl installed for healthchecks, `/data` pre-owned by `app` | Least privilege + a healthcheck that actually validates HTTP, named volume writable by non-root | Root user; bash `/dev/tcp` check; bind mount |
 | 26 | Compose project name pinned to `musicalbums`, host port `5080:8080` | Stable container/volume names for TuxComp; matches local docs | Directory-derived project name; port 8080 on host |
 | 27 | Tiny-delivery commits: each commit independently verified (build + tests; container E2E for the Docker delivery) | Interview-ready workflow; no untested code in history | One big-bang commit per version |
+| 28 | Auth: none; identity is the `{userName}` route segment, documented | Fits the interview scope; no false sense of security | API key filter; JWT bearer |
+| 29 | Album `externalUrl` exposed (Deezer `link`, Spotify `external_urls.spotify`) | Users need a jump to the provider page; cheap to map | Omit |
+| 30 | Spotify live blocked by the February 2026 Premium policy; `Fake` stays the demo default; policy + dated 403 evidence documented | Account-level restriction, not a code defect; adapter covered by stubbed-transport E2E | Wait for Premium; drop Spotify |
+| 31 | Demo frontend served from the API's `wwwroot` instead of its own Deployment | One container, same origin, zero CORS; conventional for backend-hosted UIs | nginx pod + Ingress + CORS |
+| 32 | Kubernetes: 1 replica, `Recreate`, PVC, NodePort 30080, optional Secret reference | SQLite single-writer; containers boot self-contained without credentials | Multi-replica + Postgres; Ingress |
+| 33 | Shared test harness extracted to `MusicAlbums.TestSupport` | One deterministic harness serves unit, integration and BDD suites | Duplicated fakes; mocking libraries |
+| 34 | Reqnroll BDD as the API acceptance layer | Living documentation, runs in `dotnet test`, no extra runtime/tooling | Playwright .NET; Postman+Newman; Testcontainers |
+| 35 | Deployment levels: local -> Docker -> Kubernetes; TuxComp phone path dropped | Reproducible anywhere; phone deployment added no interview value | TuxComp/termux deployment |
