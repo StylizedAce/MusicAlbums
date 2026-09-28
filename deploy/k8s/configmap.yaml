@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: musicalbums-config
+  namespace: musicalbums
+data:
+  ASPNETCORE_ENVIRONMENT: Production
+  AlbumProviders__Default: deezer
+  AlbumProviders__Spotify__Mode: Fake
+  ConnectionStrings__Library: "Data Source=/data/musicalbums.db"
