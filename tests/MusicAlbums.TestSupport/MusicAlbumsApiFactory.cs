@@ -8,9 +8,8 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using MusicAlbums.Infrastructure.Persistence;
 using MusicAlbums.Infrastructure.Providers.Deezer;
 using MusicAlbums.Infrastructure.Providers.Spotify;
-using MusicAlbums.Tests.Support;
 
-namespace MusicAlbums.Tests.Integration;
+namespace MusicAlbums.TestSupport;
 
 public sealed class MusicAlbumsApiFactory : WebApplicationFactory<Program>
 {

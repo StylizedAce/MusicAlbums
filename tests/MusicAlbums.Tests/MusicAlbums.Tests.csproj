@@ -8,6 +8,7 @@
     <ProjectReference Include="..\..\src\MusicAlbums.Api\MusicAlbums.Api.csproj" />
     <ProjectReference Include="..\..\src\MusicAlbums.Core\MusicAlbums.Core.csproj" />
     <ProjectReference Include="..\..\src\MusicAlbums.Infrastructure\MusicAlbums.Infrastructure.csproj" />
+    <ProjectReference Include="..\MusicAlbums.TestSupport\MusicAlbums.TestSupport.csproj" />
   </ItemGroup>
 
   <ItemGroup>

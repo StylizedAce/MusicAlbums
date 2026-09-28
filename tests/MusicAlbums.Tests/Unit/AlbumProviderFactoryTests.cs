@@ -1,6 +1,6 @@
 using MusicAlbums.Core.Abstractions;
 using MusicAlbums.Core.Exceptions;
-using MusicAlbums.Tests.Support;
+using MusicAlbums.TestSupport;
 
 namespace MusicAlbums.Tests.Unit;
 

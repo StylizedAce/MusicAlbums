@@ -2,9 +2,9 @@ using MusicAlbums.Core.Abstractions;
 using MusicAlbums.Core.Exceptions;
 using MusicAlbums.Core.Models;
 
-namespace MusicAlbums.Tests.Support;
+namespace MusicAlbums.TestSupport;
 
-internal sealed class StubAlbumProvider(string name = "stub") : IAlbumProvider
+public sealed class StubAlbumProvider(string name = "stub") : IAlbumProvider
 {
     private readonly Dictionary<string, ProviderAlbum> _albums = new(StringComparer.Ordinal);
 

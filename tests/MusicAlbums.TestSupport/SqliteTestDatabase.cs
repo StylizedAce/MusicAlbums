@@ -2,9 +2,9 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using MusicAlbums.Infrastructure.Persistence;
 
-namespace MusicAlbums.Tests.Support;
+namespace MusicAlbums.TestSupport;
 
-internal sealed class SqliteTestDatabase : IDisposable
+public sealed class SqliteTestDatabase : IDisposable
 {
     private readonly SqliteConnection _connection = new("Data Source=:memory:");
 

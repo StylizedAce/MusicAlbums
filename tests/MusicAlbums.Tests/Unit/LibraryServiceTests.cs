@@ -3,7 +3,7 @@ using MusicAlbums.Core.Application;
 using MusicAlbums.Core.Exceptions;
 using MusicAlbums.Core.Models;
 using MusicAlbums.Infrastructure.Persistence.Repositories;
-using MusicAlbums.Tests.Support;
+using MusicAlbums.TestSupport;
 
 namespace MusicAlbums.Tests.Unit;
 

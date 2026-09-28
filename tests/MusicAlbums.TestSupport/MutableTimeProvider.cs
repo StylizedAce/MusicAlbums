@@ -1,6 +1,6 @@
-namespace MusicAlbums.Tests.Support;
+namespace MusicAlbums.TestSupport;
 
-internal sealed class MutableTimeProvider(DateTimeOffset utcNow) : TimeProvider
+public sealed class MutableTimeProvider(DateTimeOffset utcNow) : TimeProvider
 {
     public DateTimeOffset UtcNow { get; set; } = utcNow;
 

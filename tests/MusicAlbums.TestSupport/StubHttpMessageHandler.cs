@@ -1,4 +1,4 @@
-namespace MusicAlbums.Tests.Support;
+namespace MusicAlbums.TestSupport;
 
 public sealed class StubHttpMessageHandler(Func<HttpRequestMessage, HttpResponseMessage> responder) : HttpMessageHandler
 {

@@ -1,9 +1,9 @@
 using System.Net;
 using System.Text;
 
-namespace MusicAlbums.Tests.Support;
+namespace MusicAlbums.TestSupport;
 
-internal static class DeezerTestData
+public static class DeezerTestData
 {
     public const string DiscoveryAlbumId = "302127";
 

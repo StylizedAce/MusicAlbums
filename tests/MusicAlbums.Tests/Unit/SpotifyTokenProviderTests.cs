@@ -3,7 +3,7 @@ using System.Text;
 using Microsoft.Extensions.Options;
 using MusicAlbums.Core.Exceptions;
 using MusicAlbums.Infrastructure.Providers.Spotify;
-using MusicAlbums.Tests.Support;
+using MusicAlbums.TestSupport;
 
 namespace MusicAlbums.Tests.Unit;
 

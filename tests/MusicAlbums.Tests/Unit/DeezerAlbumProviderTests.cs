@@ -2,7 +2,7 @@ using System.Net;
 using MusicAlbums.Core.Exceptions;
 using MusicAlbums.Core.Models;
 using MusicAlbums.Infrastructure.Providers.Deezer;
-using MusicAlbums.Tests.Support;
+using MusicAlbums.TestSupport;
 
 namespace MusicAlbums.Tests.Unit;
 

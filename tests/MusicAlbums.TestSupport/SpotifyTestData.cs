@@ -1,9 +1,9 @@
 using System.Net;
 using System.Text;
 
-namespace MusicAlbums.Tests.Support;
+namespace MusicAlbums.TestSupport;
 
-internal static class SpotifyTestData
+public static class SpotifyTestData
 {
     public const string TokenJson = """
         { "access_token": "test-access-token", "token_type": "Bearer", "expires_in": 3600 }
