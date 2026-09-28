@@ -63,6 +63,7 @@ public sealed class DeezerAlbumProviderTests
         Assert.Equal(new[] { 1, 2, 3, 4 }, album.Tracks.Select(track => track.Position).ToArray());
         Assert.Equal("One More Time", album.Tracks[0].Title);
         Assert.Equal(320, album.Tracks[0].DurationSeconds);
+        Assert.Equal("https://cdns-preview.dzcdn.net/stream/one-more-time.mp3", album.Tracks[0].PreviewUrl);
     }
 
     [Fact]

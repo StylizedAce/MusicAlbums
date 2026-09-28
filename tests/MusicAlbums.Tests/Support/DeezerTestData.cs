@@ -32,7 +32,7 @@ internal static class DeezerTestData
           "artist": { "id": 27, "name": "Daft Punk" },
           "tracks": {
             "data": [
-              { "id": 3135553, "title": "One More Time", "duration": 320 },
+              { "id": 3135553, "title": "One More Time", "duration": 320, "preview": "https://cdns-preview.dzcdn.net/stream/one-more-time.mp3" },
               { "id": 3135554, "title": "Aerodynamic", "duration": 212 },
               { "id": 3135555, "title": "Digital Love", "duration": 301 },
               { "id": 3135556, "title": "Harder, Better, Faster, Stronger", "duration": 224 }

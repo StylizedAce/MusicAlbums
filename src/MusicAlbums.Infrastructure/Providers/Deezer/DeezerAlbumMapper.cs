@@ -13,7 +13,8 @@ internal static class DeezerAlbumMapper
                 .Select((track, index) => new ProviderTrack(
                     track.TrackPosition ?? index + 1,
                     track.Title ?? $"Track {index + 1}",
-                    track.Duration))
+                    track.Duration,
+                    track.Preview))
                 .ToArray()
             : [];
 

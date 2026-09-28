@@ -31,7 +31,8 @@ internal sealed record DeezerTrackDto(
     [property: JsonPropertyName("id")] long Id,
     [property: JsonPropertyName("title")] string? Title,
     [property: JsonPropertyName("duration")] int? Duration,
-    [property: JsonPropertyName("track_position")] int? TrackPosition);
+    [property: JsonPropertyName("track_position")] int? TrackPosition,
+    [property: JsonPropertyName("preview")] string? Preview);
 
 internal sealed record DeezerErrorDto(
     [property: JsonPropertyName("type")] string? Type,

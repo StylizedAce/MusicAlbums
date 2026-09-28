@@ -11,4 +11,6 @@ public sealed class SavedTrack
     public required string Title { get; set; }
 
     public int? DurationSeconds { get; set; }
+
+    public string? PreviewUrl { get; set; }
 }

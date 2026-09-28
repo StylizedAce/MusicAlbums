@@ -5,7 +5,7 @@ namespace MusicAlbums.Api.Contracts;
 internal static class ContractMappings
 {
     public static TrackResponse ToResponse(this ProviderTrack track) =>
-        new(track.Position, track.Title, track.DurationSeconds);
+        new(track.Position, track.Title, track.DurationSeconds, track.PreviewUrl);
 
     public static AlbumResponse ToResponse(this ProviderAlbum album) =>
         new(album.ProviderName,
@@ -30,5 +30,5 @@ internal static class ContractMappings
             album.CoverImageUrl,
             album.TrackCount,
             album.SavedAt,
-            [.. album.Tracks.Select(track => new TrackResponse(track.Position, track.Title, track.DurationSeconds))]);
+            [.. album.Tracks.Select(track => new TrackResponse(track.Position, track.Title, track.DurationSeconds, track.PreviewUrl))]);
 }

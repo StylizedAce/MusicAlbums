@@ -47,7 +47,8 @@ public sealed class SavedAlbum
             {
                 Position = track.Position,
                 Title = track.Title,
-                DurationSeconds = track.DurationSeconds
+                DurationSeconds = track.DurationSeconds,
+                PreviewUrl = track.PreviewUrl
             })]
         };
     }

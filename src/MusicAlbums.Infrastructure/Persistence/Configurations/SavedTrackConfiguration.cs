@@ -15,5 +15,8 @@ public sealed class SavedTrackConfiguration : IEntityTypeConfiguration<SavedTrac
         builder.Property(track => track.Title)
             .IsRequired()
             .HasMaxLength(500);
+
+        builder.Property(track => track.PreviewUrl)
+            .HasMaxLength(1000);
     }
 }

@@ -43,6 +43,7 @@ public sealed class LibraryServiceTests : IDisposable
         var album = Assert.Single(library);
         Assert.Equal("album-1", album.ProviderAlbumId);
         Assert.Equal(new[] { 1, 2 }, album.Tracks.Select(track => track.Position).ToArray());
+        Assert.Equal("https://preview.example/track-one.mp3", album.Tracks[0].PreviewUrl);
     }
 
     [Fact]
@@ -120,7 +121,7 @@ public sealed class LibraryServiceTests : IDisposable
             "https://cover.example/x.jpg",
             2,
             [
-                new ProviderTrack(1, "Track One", 100),
+                new ProviderTrack(1, "Track One", 100, "https://preview.example/track-one.mp3"),
                 new ProviderTrack(2, "Track Two", 200)
             ]);
 
