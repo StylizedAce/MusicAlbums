@@ -177,11 +177,13 @@ and the "how would you scale it" answers in
   [`03-deezer-integration.md`](DomainKnowledge/03-deezer-integration.md).
 - **Rate limits (our next delivery, design in
   [`11-architecture-explained.md`](DomainKnowledge/11-architecture-explained.md#7-rate-limits-what-the-assignment-asks-and-what-we-do-today)):**
-  today we honour declared limits (Spotify search clamped to 10) and use per-call
-  timeouts. Next: a per-provider concurrency limiter (`System.Threading.RateLimiting`),
-  a circuit breaker, jittered retries for idempotent GETs honouring `Retry-After`, a
-  short-lived per-provider cache, and provider call/latency metrics. Each provider's
-  limits become configuration, not code.
+  documented limits (Spotify search clamped to 10) and use per-call timeouts.
+  **Implemented now:** every provider call goes through `ThrottledAlbumProvider`,
+  which caps in-flight requests per provider and opens a circuit after repeated
+  upstream failures (fails fast instead of stacking 15s timeouts) - configured
+  under `AlbumProviders:Throttling`. Still next: jittered retries honouring
+  `Retry-After`, a short-lived per-provider cache, and provider call/latency
+  metrics. Each provider's limits are configuration, not code.
 - **Scaling the deployment:** the persistence layer is provider-swappable, so moving
   SQLite -> Postgres/SQL Server is one `UseSqlite` call plus a migration, which is
   what would unlock horizontal replicas (today: 1 replica, because SQLite has a

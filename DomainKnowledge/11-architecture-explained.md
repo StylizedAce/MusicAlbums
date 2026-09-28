@@ -381,23 +381,31 @@ rate limits?"*
 quirks (Deezer's HTTP-200 error envelope, Spotify's `release_date_precision`,
 Deezer's signed previews). Callers never see provider-specific shapes.
 
-**Rate limits - designed, not yet implemented.** Today: a 15s HTTP timeout per call,
-and we *respect* provider-declared limits where documented (Spotify search is clamped
-to 10 per its Dev Mode policy; Deezer's ~50 requests / 5 seconds is documented in
-`03-deezer-integration.md`). What is missing:
+**Rate limits - now partly implemented.** Today: a 15s HTTP timeout per call, and we
+*respect* provider-declared limits where documented (Spotify search is clamped to 10
+per its Dev Mode policy; Deezer's ~50 requests / 5 seconds is documented in
+`03-deezer-integration.md`). Additionally, **every provider call is wrapped in
+`ThrottledAlbumProvider`**, which adds:
 
-1. **Client-side rate limiting** - a per-provider limiter so *we* never exceed the
-   provider's cap. .NET has this in-box (`System.Threading.RateLimiting`): a
-   `ConcurrencyLimiter` (cap in-flight requests per provider) plus a token-bucket for
-   requests-per-second, registered per provider name.
-2. **Circuit breaking** - if a provider starts failing, stop calling it for a while
-   and return 502 fast instead of piling up 15s timeouts
-   (`Microsoft.Extensions.Http.Resilience` / Polly).
-3. **Retry with jitter** - only for idempotent GETs, honoring `Retry-After`.
-4. **Short-lived caching** - the same album gets fetched repeatedly (search then save);
-   a small in-memory cache per provider cuts both latency and rate-limit consumption.
-5. **Observability** - log provider call counts/latency so limits are tuned with data,
-   not guesses.
+1. **A per-provider concurrency cap** (`MaxConcurrentRequests`, default 4) - we never
+   have more than N requests in flight against one catalogue, so a burst from our own
+   traffic can never exceed a provider's limit.
+2. **A circuit breaker** - after `FailureThreshold` consecutive upstream failures
+   (`AlbumProviderUnavailableException`), the guard stops calling that provider for
+   `BreakDurationSeconds` and fails fast with a clear message instead of piling up
+   timeouts; the first success resets it. It is a *decorator* on `IAlbumProvider`, so
+   the strategy contract, the factory and every caller are untouched, and each
+   provider's limits are configuration (`AlbumProviders:Throttling`), not code.
+
+What is still not implemented, and would be the next steps:
+
+3. **Retry with jitter** - only for idempotent GETs, honoring `Retry-After`
+   (`Microsoft.Extensions.Http.Resilience` / Polly would slot in beside the guard).
+4. **Short-lived caching** - the same album gets fetched repeatedly (search then
+   save); a small in-memory cache per provider cuts both latency and rate-limit
+   consumption.
+5. **Observability** - log provider call counts/latency so limits are tuned with
+   data, not guesses.
 
 **Why it is not in yet:** it is real complexity guarding a problem we have not
 observed (Deezer has never throttled us in live testing), and the assignment warns

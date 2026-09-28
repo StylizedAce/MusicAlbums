@@ -40,3 +40,4 @@ alternatives considered.
 | 33 | Shared test harness extracted to `MusicAlbums.TestSupport` | One deterministic harness serves unit, integration and BDD suites | Duplicated fakes; mocking libraries |
 | 34 | Reqnroll BDD as the API acceptance layer | Living documentation, runs in `dotnet test`, no extra runtime/tooling | Playwright .NET; Postman+Newman; Testcontainers |
 | 35 | Deployment levels: local -> Docker -> Kubernetes; TuxComp phone path dropped | Reproducible anywhere; phone deployment added no interview value | TuxComp/termux deployment |
+| 36 | Provider resilience as a decorator (`ThrottledAlbumProvider`): per-provider concurrency cap + circuit breaker, configured via `AlbumProviders:Throttling` | Answers "how do you handle rate limits" concretely; decorators keep the strategy contract untouched; no new packages | Polly/resilience handlers; a retry-only approach; nothing |

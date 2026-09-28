@@ -8,6 +8,7 @@ using MusicAlbums.Infrastructure.Persistence.Repositories;
 using MusicAlbums.Infrastructure.Providers;
 using MusicAlbums.Infrastructure.Providers.Deezer;
 using MusicAlbums.Infrastructure.Providers.Spotify;
+using MusicAlbums.Infrastructure.Providers.Throttling;
 
 namespace MusicAlbums.Infrastructure;
 
@@ -51,7 +52,21 @@ public static class DependencyInjection
             client.Timeout = TimeSpan.FromSeconds(options.TimeoutSeconds);
         });
 
-        services.AddTransient<IAlbumProvider>(serviceProvider => serviceProvider.GetRequiredService<DeezerAlbumProvider>());
+        services.AddTransient<IAlbumProvider>(serviceProvider =>
+            new ThrottledAlbumProvider(
+                serviceProvider.GetRequiredService<DeezerAlbumProvider>(),
+                serviceProvider.GetRequiredService<ProviderGuardRegistry>()));
+
+        services.AddSingleton<ISpotifyTokenProvider, SpotifyTokenProvider>();
+
+        services.AddOptions<ProviderThrottleOptions>()
+            .Bind(configuration.GetSection(ProviderThrottleOptions.SectionName))
+            .Validate(options => options.MaxConcurrentRequests > 0, "AlbumProviders:Throttling:MaxConcurrentRequests must be positive.")
+            .Validate(options => options.FailureThreshold > 0, "AlbumProviders:Throttling:FailureThreshold must be positive.")
+            .Validate(options => options.BreakDurationSeconds > 0, "AlbumProviders:Throttling:BreakDurationSeconds must be positive.")
+            .ValidateOnStart();
+
+        services.AddSingleton<ProviderGuardRegistry>();
 
         services.AddHttpClient(SpotifyHttpClients.Accounts, (serviceProvider, client) =>
         {
@@ -77,7 +92,10 @@ public static class DependencyInjection
         }
         else
         {
-            services.AddTransient<IAlbumProvider>(serviceProvider => serviceProvider.GetRequiredService<SpotifyAlbumProvider>());
+            services.AddTransient<IAlbumProvider>(serviceProvider =>
+                new ThrottledAlbumProvider(
+                    serviceProvider.GetRequiredService<SpotifyAlbumProvider>(),
+                    serviceProvider.GetRequiredService<ProviderGuardRegistry>()));
         }
 
         services.AddTransient<IAlbumProviderFactory, AlbumProviderFactory>();
