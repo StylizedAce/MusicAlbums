@@ -29,7 +29,7 @@ relative to the repository root.
 ```powershell
 dotnet tool restore                                   # restores the pinned dotnet-ef tool
 dotnet build                                          # 0 warnings (warnings are errors)
-dotnet test                                           # 56 tests: 43 unit/integration + 13 BDD
+dotnet test                                           # 64 tests: 50 unit/integration + 14 BDD
 dotnet run --project src/MusicAlbums.Api --launch-profile http
 ```
 
@@ -117,7 +117,7 @@ decision (see `DomainKnowledge/07-decision-log.md`).
 ## Tests
 
 ```powershell
-dotnet test                              # everything: 43 unit/integration + 13 BDD
+dotnet test                              # everything: 50 unit/integration + 14 BDD
 dotnet test tests/MusicAlbums.Tests      # unit + integration only
 dotnet test tests/MusicAlbums.ApiTests   # the API acceptance suite (Part 2 deliverable)
 ```

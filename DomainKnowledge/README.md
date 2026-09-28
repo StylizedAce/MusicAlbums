@@ -20,6 +20,7 @@ between sessions. Update it whenever a meaningful decision changes.
 | [10-code-walkthrough.md](10-code-walkthrough.md) | End-to-end code walkthrough: request flow, patterns, traces |
 | [11-architecture-explained.md](11-architecture-explained.md) | Beginner-friendly explainers: deployment topology, k8s mechanics, IaC, compose vs k8s, microservices, concurrency, glossary |
 | [12-assignment-compliance.md](12-assignment-compliance.md) | Requirement-by-requirement audit against the take-home brief, with honest gaps |
+| [13-repo-map.md](13-repo-map.md) | Flashcard repo map and interview drill (where is X, likely questions) |
 | [verification/V1-verification.md](verification/V1-verification.md) | V1 test evidence: 27/27 automated + live Deezer E2E |
 | [verification/V2-verification.md](verification/V2-verification.md) | V2 test evidence: 30/30 automated + native/container E2E |
 | [verification/V3-verification.md](verification/V3-verification.md) | V3 test evidence: album URLs + Spotify adapter + policy notes |

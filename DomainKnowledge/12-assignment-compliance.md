@@ -37,7 +37,7 @@ Status legend: **MET** = fully satisfied Â· **MET+** = satisfied and then some Â
 
 | Requirement | Status | Evidence |
 | --- | --- | --- |
-| "Include unit tests." | **MET+** | 43 unit + integration tests, plus 13 BDD acceptance scenarios = 56. |
+| "Include unit tests." | **MET+** | 50 unit + integration tests, plus 14 BDD acceptance scenarios = 64. |
 | "Show us which parts you chose to make unit-testable, and why that shape works." | **GAP (now addressed)** | Was only in `DomainKnowledge`; the assignment wants it in the README. Added a "Testing approach" section to the README. |
 
 ### Document it
