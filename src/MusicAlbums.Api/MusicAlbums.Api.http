@@ -1,5 +1,11 @@
 @host = http://localhost:5080
 
+### Health: liveness (no dependencies)
+GET {{host}}/health/live
+
+### Health: readiness (includes database check)
+GET {{host}}/health/ready
+
 ### List available providers
 GET {{host}}/api/providers
 

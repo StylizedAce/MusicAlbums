@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using MusicAlbums.Api.Endpoints;
 using MusicAlbums.Api.ErrorHandling;
@@ -12,6 +13,9 @@ builder.Services.AddOpenApi();
 builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<MusicAlbumsExceptionHandler>();
 
+builder.Services.AddHealthChecks()
+    .AddDbContextCheck<MusicAlbumsDbContext>("database", tags: ["ready"]);
+
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddScoped<IAlbumCatalogService, AlbumCatalogService>();
@@ -25,6 +29,9 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.MapHealthChecks("/health/live", new HealthCheckOptions { Predicate = _ => false });
+app.MapHealthChecks("/health/ready", new HealthCheckOptions { Predicate = registration => registration.Tags.Contains("ready") });
 
 using (var scope = app.Services.CreateScope())
 {
