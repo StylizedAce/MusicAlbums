@@ -1,0 +1,52 @@
+@host = http://localhost:5080
+
+### List available providers
+GET {{host}}/api/providers
+
+### Search albums on Deezer (real API)
+GET {{host}}/api/albums/search?q=daft%20punk&provider=deezer&limit=5
+
+### Search albums on Spotify (fake provider)
+GET {{host}}/api/albums/search?q=radiohead&provider=spotify
+
+### Search with default provider (deezer)
+GET {{host}}/api/albums/search?q=radiohead
+
+### Get album details from Deezer
+GET {{host}}/api/albums/deezer/302127
+
+### Save an album to a user's library (creates the user on first save)
+POST {{host}}/api/users/alice/library
+Content-Type: application/json
+
+{
+  "provider": "deezer",
+  "providerAlbumId": "302127"
+}
+
+### Get a user's library
+GET {{host}}/api/users/alice/library
+
+### Remove an album from a user's library (replace with a real id)
+DELETE {{host}}/api/users/alice/library/00000000-0000-0000-0000-000000000000
+
+### Unknown provider -> 400
+GET {{host}}/api/albums/search?q=test&provider=napster
+
+### Album unknown to the provider -> 404
+POST {{host}}/api/users/alice/library
+Content-Type: application/json
+
+{
+  "provider": "deezer",
+  "providerAlbumId": "999999999999"
+}
+
+### Duplicate save -> 409
+POST {{host}}/api/users/alice/library
+Content-Type: application/json
+
+{
+  "provider": "deezer",
+  "providerAlbumId": "302127"
+}
