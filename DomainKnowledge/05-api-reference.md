@@ -12,6 +12,8 @@ everywhere; when omitted the configured default (`AlbumProviders:Default`) is us
 
 | Method | Route | Purpose | Success | Errors |
 | --- | --- | --- | --- | --- |
+| GET | `/health/live` | Liveness probe, no dependencies | 200 `Healthy` | - |
+| GET | `/health/ready` | Readiness probe incl. SQLite connectivity | 200 `Healthy` | 503 when the database is unreachable |
 | GET | `/api/providers` | List registered providers | 200 | - |
 | GET | `/api/albums/search?q&provider&limit&offset` | Search a provider catalogue | 200 | 400 missing `q` / unknown provider, 502 provider down |
 | GET | `/api/albums/{provider}/{providerAlbumId}` | Fetch album details | 200 | 400 unknown provider, 404 unknown album, 502 provider down |

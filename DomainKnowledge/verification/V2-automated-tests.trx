@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="639872a3-5fbe-4954-9e4a-aeabb0911abd" name="Gamer@DESKTOP-MM7SQ6B 2026-09-28 10:08:02" runUser="DESKTOP-MM7SQ6B\Gamer" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-28T10:08:02.6480917+02:00" queuing="2026-09-28T10:08:02.6480923+02:00" start="2026-09-28T10:08:01.8985143+02:00" finish="2026-09-28T10:08:03.8927441+02:00" />
+  <TestSettings name="default" id="2824e12f-ce39-49f2-be8a-580d604ac59a">
+    <Deployment runDeploymentRoot="Gamer_DESKTOP-MM7SQ6B_2026-09-28_10_08_02" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="3fe34e6b-8e97-4962-96f1-0f33d690a9d2" testId="2ff5ef8b-1c82-f892-42c4-3da94984acf1" testName="MusicAlbums.Tests.Integration.LibraryApiTests.FullLibraryLifecycle_UsesRealDeezerProviderAgainstStubbedHttp" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.3786957" startTime="2026-09-28T10:08:03.3693738+02:00" endTime="2026-09-28T10:08:03.7484523+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fe34e6b-8e97-4962-96f1-0f33d690a9d2" />
+    <UnitTestResult executionId="a8e1b53e-3556-46f4-903c-575e7493f6ff" testId="fc77c6f8-c3a4-c1ed-3d67-91b0c0b83f60" testName="MusicAlbums.Tests.Integration.LibraryApiTests.GetLibrary_UnknownUser_Returns404ProblemDetails" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0021414" startTime="2026-09-28T10:08:03.7518276+02:00" endTime="2026-09-28T10:08:03.7540740+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8e1b53e-3556-46f4-903c-575e7493f6ff" />
+    <UnitTestResult executionId="0918dc14-27e4-4f37-b639-4132dca323a2" testId="65e6d1c5-ecf0-424d-1fab-af60ca104a44" testName="MusicAlbums.Tests.Integration.LibraryApiTests.SaveAlbum_UnknownToProvider_Returns404ProblemDetails" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0029809" startTime="2026-09-28T10:08:03.7487277+02:00" endTime="2026-09-28T10:08:03.7517121+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0918dc14-27e4-4f37-b639-4132dca323a2" />
+    <UnitTestResult executionId="fbd49266-2586-440e-9d2f-c304f983734b" testId="0501bd90-c931-5f09-3482-7252dab7a81e" testName="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetAll_ReturnsEveryRegisteredProvider" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0098349" startTime="2026-09-28T10:08:02.6240179+02:00" endTime="2026-09-28T10:08:02.6259362+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fbd49266-2586-440e-9d2f-c304f983734b" />
+    <UnitTestResult executionId="89c9ca64-abda-453d-b658-d8004b218842" testId="df569aeb-e789-27f2-9085-5ac51009d879" testName="MusicAlbums.Tests.Unit.LibraryServiceTests.GetLibraryAsync_UnknownUser_Throws" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0051527" startTime="2026-09-28T10:08:03.7914783+02:00" endTime="2026-09-28T10:08:03.7965322+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="89c9ca64-abda-453d-b658-d8004b218842" />
+    <UnitTestResult executionId="f3a04dbb-af3a-462a-8c7d-a370ecfcc59c" testId="253408ca-2ff2-580d-c6fa-bbc3c432ccf8" testName="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.SearchAlbumsAsync_MapsResults_AndSendsDeezerPagingParameters" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.1392744" startTime="2026-09-28T10:08:02.4842732+02:00" endTime="2026-09-28T10:08:02.6277150+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3a04dbb-af3a-462a-8c7d-a370ecfcc59c" />
+    <UnitTestResult executionId="d7cb6aed-14a7-42a6-8bf2-1111c31736ed" testId="09e94dc6-8c22-f6a0-3dac-10fe805226ab" testName="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetRequired_ResolvesProviderNameCaseInsensitively" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0002132" startTime="2026-09-28T10:08:02.5948905+02:00" endTime="2026-09-28T10:08:02.5949855+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7cb6aed-14a7-42a6-8bf2-1111c31736ed" />
+    <UnitTestResult executionId="aac0f31d-1ec9-4708-9f20-b45020728be8" testId="ca9b035c-73d8-82d8-452c-c4880f73b9a8" testName="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_WhenDeezerIsUnavailable_ThrowsProviderUnavailable" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0018331" startTime="2026-09-28T10:08:02.6278543+02:00" endTime="2026-09-28T10:08:02.6297448+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aac0f31d-1ec9-4708-9f20-b45020728be8" />
+    <UnitTestResult executionId="2c86e2ea-8e77-4ed1-878e-9ec8125aefaf" testId="3e545880-fa56-78f8-cec9-f81ae12b0c72" testName="MusicAlbums.Tests.Integration.LibraryApiTests.SearchAlbums_WithSpotifyProvider_UsesFakeSpotifyStrategy" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0019853" startTime="2026-09-28T10:08:03.7587178+02:00" endTime="2026-09-28T10:08:03.7607928+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c86e2ea-8e77-4ed1-878e-9ec8125aefaf" />
+    <UnitTestResult executionId="ec5b933f-23c6-4dc7-9368-2c8ff47d984a" testId="2e7e8772-8b13-31bf-33af-0e31b77099c5" testName="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetDefault_ReturnsConfiguredDefaultProvider" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0001522" startTime="2026-09-28T10:08:02.5960338+02:00" endTime="2026-09-28T10:08:02.5960933+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec5b933f-23c6-4dc7-9368-2c8ff47d984a" />
+    <UnitTestResult executionId="19319b53-ae35-49e7-86cd-f9ac601fbfd8" testId="9f61ffc6-ddc6-f3bf-8601-7773b0183b54" testName="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_WhenDeezerReportsNoData_ThrowsNotFound" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0024704" startTime="2026-09-28T10:08:02.6347226+02:00" endTime="2026-09-28T10:08:02.6371551+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19319b53-ae35-49e7-86cd-f9ac601fbfd8" />
+    <UnitTestResult executionId="c67b25a6-4c66-4554-bf21-aa7eb17d2535" testId="d50c3ec9-c9a1-40ff-eb44-009fc2e0a01a" testName="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_MapsDetailAndTracks_FallingBackToTrackOrderForPositions" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0047247" startTime="2026-09-28T10:08:02.6300772+02:00" endTime="2026-09-28T10:08:02.6345553+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c67b25a6-4c66-4554-bf21-aa7eb17d2535" />
+    <UnitTestResult executionId="44bbfc5c-1b91-43ac-8e26-3571f34aee95" testId="97c57fd3-fd3d-34a1-8e0a-28182a191802" testName="MusicAlbums.Tests.Unit.LibraryServiceTests.RemoveAlbumAsync_RemovesOnlyRequestedAlbum_AndReportsMissingOnes" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0235390" startTime="2026-09-28T10:08:03.7966630+02:00" endTime="2026-09-28T10:08:03.8201924+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44bbfc5c-1b91-43ac-8e26-3571f34aee95" />
+    <UnitTestResult executionId="1daea3bd-9fa0-442e-97de-cc621cc3b1bf" testId="208239fb-182e-84ee-321b-46c020c4d8e4" testName="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.SearchAlbumsAsync_MatchesArtistOrTitle_CaseInsensitively" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0022870" startTime="2026-09-28T10:08:02.6245972+02:00" endTime="2026-09-28T10:08:02.6246347+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1daea3bd-9fa0-442e-97de-cc621cc3b1bf" />
+    <UnitTestResult executionId="00178d1a-045e-4c17-a460-2b12feab0767" testId="6fce4e0c-83af-5bc5-c06f-f66340ab633c" testName="MusicAlbums.Tests.Integration.LibraryApiTests.SearchAlbums_UnknownProvider_Returns400ProblemDetails" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.8742223" startTime="2026-09-28T10:08:02.4947278+02:00" endTime="2026-09-28T10:08:03.3692246+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00178d1a-045e-4c17-a460-2b12feab0767" />
+    <UnitTestResult executionId="fb99cf49-bb86-4450-8c09-22e2109bf6f6" testId="4b90b80a-aaf1-6308-35d2-a09202e1427e" testName="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_SameAlbumForDifferentUsers_KeepsLibrariesSeparate" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0146706" startTime="2026-09-28T10:08:03.8207928+02:00" endTime="2026-09-28T10:08:03.8349859+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb99cf49-bb86-4450-8c09-22e2109bf6f6" />
+    <UnitTestResult executionId="9810faa7-5429-4769-8ccc-1ea1a88fa455" testId="47dbbc3a-7d07-7768-8e3c-4e8352909900" testName="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_AlbumUnknownToProvider_Throws_AndPersistsNothing" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0646118" startTime="2026-09-28T10:08:03.7191811+02:00" endTime="2026-09-28T10:08:03.7832545+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9810faa7-5429-4769-8ccc-1ea1a88fa455" />
+    <UnitTestResult executionId="b6541dde-5fc5-4097-802a-22be0f4a780f" testId="e0e098f0-bf7a-47fa-3de8-30aa3f9df368" testName="MusicAlbums.Tests.Integration.LibraryApiTests.SearchAlbums_MissingQuery_ReturnsValidationProblem" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0042395" startTime="2026-09-28T10:08:03.7541765+02:00" endTime="2026-09-28T10:08:03.7585740+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6541dde-5fc5-4097-802a-22be0f4a780f" />
+    <UnitTestResult executionId="d66a311c-9599-424f-b5c1-8c699df351e4" testId="099e40eb-b228-8b05-299a-8cf80b19ef23" testName="MusicAlbums.Tests.Integration.SpotifyConfigurationTests.SpotifyApiMode_FailsFast_UntilTheRealAdapterShips" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.2015672" startTime="2026-09-28T10:08:02.4842882+02:00" endTime="2026-09-28T10:08:02.6900458+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d66a311c-9599-424f-b5c1-8c699df351e4" />
+    <UnitTestResult executionId="805099b0-96ae-483d-8dd4-6b2f75eea810" testId="319246c0-5730-5276-f64e-08fc205a2b7a" testName="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.SearchAlbumsAsync_ClampsLimitAndOffsetToSupportedRange" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0009165" startTime="2026-09-28T10:08:02.6393572+02:00" endTime="2026-09-28T10:08:02.6394068+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="805099b0-96ae-483d-8dd4-6b2f75eea810" />
+    <UnitTestResult executionId="2ec9953b-b077-4cbc-9d1e-c39f31773f1b" testId="218f00f7-5259-b3f6-3e0e-8b36041926b3" testName="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_DuplicateForSameUser_Throws_AndKeepsSingleEntry" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0079343" startTime="2026-09-28T10:08:03.7834104+02:00" endTime="2026-09-28T10:08:03.7913428+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ec9953b-b077-4cbc-9d1e-c39f31773f1b" />
+    <UnitTestResult executionId="e4d83efb-e1fa-4bca-97cd-ad798afa5a56" testId="bac41cd2-b0ab-33db-ef49-e1a1bb3cf36f" testName="MusicAlbums.Tests.Integration.HealthEndpointsTests.Ready_ReturnsHealthy_WithDatabaseCheck" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0782004" startTime="2026-09-28T10:08:03.3575576+02:00" endTime="2026-09-28T10:08:03.4361794+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4d83efb-e1fa-4bca-97cd-ad798afa5a56" />
+    <UnitTestResult executionId="4a4db9f4-7b4d-479b-b160-af9ef6b871e6" testId="6253d7a7-f78f-d453-b5b3-4d19fddcc5bd" testName="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetRequired_UnknownProvider_Throws" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0918639" startTime="2026-09-28T10:08:02.4827602+02:00" endTime="2026-09-28T10:08:02.5833791+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a4db9f4-7b4d-479b-b160-af9ef6b871e6" />
+    <UnitTestResult executionId="452ac613-af7c-4033-9877-e496f4f22875" testId="2ebae0f1-cc49-7a82-ff06-e77c1a2b7662" testName="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.GetAlbumAsync_ReturnsCatalogueAlbumWithTracks" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0021625" startTime="2026-09-28T10:08:02.6247051+02:00" endTime="2026-09-28T10:08:02.6247312+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="452ac613-af7c-4033-9877-e496f4f22875" />
+    <UnitTestResult executionId="3eda7046-0f81-470c-a240-b45c2a1f2477" testId="fefb342b-d419-b5d1-66b7-fe17009e4fc7" testName="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_WhenReleaseDateIsInvalid_ReturnsNullReleaseDate" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0010200" startTime="2026-09-28T10:08:02.6395230+02:00" endTime="2026-09-28T10:08:02.6395609+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3eda7046-0f81-470c-a240-b45c2a1f2477" />
+    <UnitTestResult executionId="027dc21e-eea0-4fd7-acd8-78667647804b" testId="d6d08b75-7c53-5c93-22d0-ffb77f465512" testName="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.GetAlbumAsync_UnknownId_ThrowsNotFound" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0023275" startTime="2026-09-28T10:08:02.6244257+02:00" endTime="2026-09-28T10:08:02.6244818+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="027dc21e-eea0-4fd7-acd8-78667647804b" />
+    <UnitTestResult executionId="d8af5959-0b4f-4ebf-8e6b-0a64a77529c2" testId="d1387f44-4f73-df22-1ab8-594d3b456297" testName="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.SearchAlbumsAsync_AppliesPaging" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0985528" startTime="2026-09-28T10:08:02.4842309+02:00" endTime="2026-09-28T10:08:02.6240755+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8af5959-0b4f-4ebf-8e6b-0a64a77529c2" />
+    <UnitTestResult executionId="18d4af3b-5162-46a6-bbc1-c16cb7117b63" testId="6b09d6be-db86-2529-2acd-991334e86c38" testName="MusicAlbums.Tests.Integration.HealthEndpointsTests.Live_ReturnsHealthy_WithoutCheckingDependencies" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.8676792" startTime="2026-09-28T10:08:02.4850392+02:00" endTime="2026-09-28T10:08:03.3561006+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18d4af3b-5162-46a6-bbc1-c16cb7117b63" />
+    <UnitTestResult executionId="ef5dd1fe-a2b2-4e35-8080-9f3289590216" testId="23042865-519d-464e-1531-3a853834a1d3" testName="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_UnknownProvider_Throws" computerName="DESKTOP-MM7SQ6B" duration="00:00:00.0156423" startTime="2026-09-28T10:08:03.7032095+02:00" endTime="2026-09-28T10:08:03.7185701+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef5dd1fe-a2b2-4e35-8080-9f3289590216" />
+    <UnitTestResult executionId="b44b5885-5cfa-4c58-acad-13177452d7d2" testId="ef1432f0-083e-7a8d-75b6-74fccc667d6f" testName="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_CreatesUserOnTheFly_AndSnapshotsAlbumWithTracks" computerName="DESKTOP-MM7SQ6B" duration="00:00:01.2169203" startTime="2026-09-28T10:08:02.4843079+02:00" endTime="2026-09-28T10:08:03.7030879+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b44b5885-5cfa-4c58-acad-13177452d7d2" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetRequired_ResolvesProviderNameCaseInsensitively" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="09e94dc6-8c22-f6a0-3dac-10fe805226ab">
+      <Execution id="d7cb6aed-14a7-42a6-8bf2-1111c31736ed" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests" name="GetRequired_ResolvesProviderNameCaseInsensitively" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.LibraryServiceTests.GetLibraryAsync_UnknownUser_Throws" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="df569aeb-e789-27f2-9085-5ac51009d879">
+      <Execution id="89c9ca64-abda-453d-b658-d8004b218842" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.LibraryServiceTests" name="GetLibraryAsync_UnknownUser_Throws" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.SearchAlbumsAsync_ClampsLimitAndOffsetToSupportedRange" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="319246c0-5730-5276-f64e-08fc205a2b7a">
+      <Execution id="805099b0-96ae-483d-8dd4-6b2f75eea810" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests" name="SearchAlbumsAsync_ClampsLimitAndOffsetToSupportedRange" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_WhenReleaseDateIsInvalid_ReturnsNullReleaseDate" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="fefb342b-d419-b5d1-66b7-fe17009e4fc7">
+      <Execution id="3eda7046-0f81-470c-a240-b45c2a1f2477" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests" name="GetAlbumAsync_WhenReleaseDateIsInvalid_ReturnsNullReleaseDate" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_WhenDeezerIsUnavailable_ThrowsProviderUnavailable" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="ca9b035c-73d8-82d8-452c-c4880f73b9a8">
+      <Execution id="aac0f31d-1ec9-4708-9f20-b45020728be8" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests" name="GetAlbumAsync_WhenDeezerIsUnavailable_ThrowsProviderUnavailable" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_SameAlbumForDifferentUsers_KeepsLibrariesSeparate" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="4b90b80a-aaf1-6308-35d2-a09202e1427e">
+      <Execution id="fb99cf49-bb86-4450-8c09-22e2109bf6f6" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.LibraryServiceTests" name="AddAlbumAsync_SameAlbumForDifferentUsers_KeepsLibrariesSeparate" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.LibraryApiTests.SaveAlbum_UnknownToProvider_Returns404ProblemDetails" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="65e6d1c5-ecf0-424d-1fab-af60ca104a44">
+      <Execution id="0918dc14-27e4-4f37-b639-4132dca323a2" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.LibraryApiTests" name="SaveAlbum_UnknownToProvider_Returns404ProblemDetails" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_AlbumUnknownToProvider_Throws_AndPersistsNothing" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="47dbbc3a-7d07-7768-8e3c-4e8352909900">
+      <Execution id="9810faa7-5429-4769-8ccc-1ea1a88fa455" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.LibraryServiceTests" name="AddAlbumAsync_AlbumUnknownToProvider_Throws_AndPersistsNothing" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetDefault_ReturnsConfiguredDefaultProvider" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="2e7e8772-8b13-31bf-33af-0e31b77099c5">
+      <Execution id="ec5b933f-23c6-4dc7-9368-2c8ff47d984a" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests" name="GetDefault_ReturnsConfiguredDefaultProvider" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.LibraryApiTests.GetLibrary_UnknownUser_Returns404ProblemDetails" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="fc77c6f8-c3a4-c1ed-3d67-91b0c0b83f60">
+      <Execution id="a8e1b53e-3556-46f4-903c-575e7493f6ff" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.LibraryApiTests" name="GetLibrary_UnknownUser_Returns404ProblemDetails" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetAll_ReturnsEveryRegisteredProvider" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="0501bd90-c931-5f09-3482-7252dab7a81e">
+      <Execution id="fbd49266-2586-440e-9d2f-c304f983734b" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests" name="GetAll_ReturnsEveryRegisteredProvider" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_MapsDetailAndTracks_FallingBackToTrackOrderForPositions" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="d50c3ec9-c9a1-40ff-eb44-009fc2e0a01a">
+      <Execution id="c67b25a6-4c66-4554-bf21-aa7eb17d2535" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests" name="GetAlbumAsync_MapsDetailAndTracks_FallingBackToTrackOrderForPositions" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_CreatesUserOnTheFly_AndSnapshotsAlbumWithTracks" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="ef1432f0-083e-7a8d-75b6-74fccc667d6f">
+      <Execution id="b44b5885-5cfa-4c58-acad-13177452d7d2" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.LibraryServiceTests" name="AddAlbumAsync_CreatesUserOnTheFly_AndSnapshotsAlbumWithTracks" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_UnknownProvider_Throws" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="23042865-519d-464e-1531-3a853834a1d3">
+      <Execution id="ef5dd1fe-a2b2-4e35-8080-9f3289590216" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.LibraryServiceTests" name="AddAlbumAsync_UnknownProvider_Throws" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.SearchAlbumsAsync_MapsResults_AndSendsDeezerPagingParameters" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="253408ca-2ff2-580d-c6fa-bbc3c432ccf8">
+      <Execution id="f3a04dbb-af3a-462a-8c7d-a370ecfcc59c" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests" name="SearchAlbumsAsync_MapsResults_AndSendsDeezerPagingParameters" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.GetAlbumAsync_ReturnsCatalogueAlbumWithTracks" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="2ebae0f1-cc49-7a82-ff06-e77c1a2b7662">
+      <Execution id="452ac613-af7c-4033-9877-e496f4f22875" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests" name="GetAlbumAsync_ReturnsCatalogueAlbumWithTracks" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.SearchAlbumsAsync_MatchesArtistOrTitle_CaseInsensitively" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="208239fb-182e-84ee-321b-46c020c4d8e4">
+      <Execution id="1daea3bd-9fa0-442e-97de-cc621cc3b1bf" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests" name="SearchAlbumsAsync_MatchesArtistOrTitle_CaseInsensitively" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.LibraryApiTests.SearchAlbums_MissingQuery_ReturnsValidationProblem" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="e0e098f0-bf7a-47fa-3de8-30aa3f9df368">
+      <Execution id="b6541dde-5fc5-4097-802a-22be0f4a780f" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.LibraryApiTests" name="SearchAlbums_MissingQuery_ReturnsValidationProblem" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.SpotifyConfigurationTests.SpotifyApiMode_FailsFast_UntilTheRealAdapterShips" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="099e40eb-b228-8b05-299a-8cf80b19ef23">
+      <Execution id="d66a311c-9599-424f-b5c1-8c699df351e4" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.SpotifyConfigurationTests" name="SpotifyApiMode_FailsFast_UntilTheRealAdapterShips" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.SearchAlbumsAsync_AppliesPaging" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="d1387f44-4f73-df22-1ab8-594d3b456297">
+      <Execution id="d8af5959-0b4f-4ebf-8e6b-0a64a77529c2" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests" name="SearchAlbumsAsync_AppliesPaging" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.LibraryApiTests.FullLibraryLifecycle_UsesRealDeezerProviderAgainstStubbedHttp" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="2ff5ef8b-1c82-f892-42c4-3da94984acf1">
+      <Execution id="3fe34e6b-8e97-4962-96f1-0f33d690a9d2" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.LibraryApiTests" name="FullLibraryLifecycle_UsesRealDeezerProviderAgainstStubbedHttp" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.LibraryServiceTests.RemoveAlbumAsync_RemovesOnlyRequestedAlbum_AndReportsMissingOnes" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="97c57fd3-fd3d-34a1-8e0a-28182a191802">
+      <Execution id="44bbfc5c-1b91-43ac-8e26-3571f34aee95" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.LibraryServiceTests" name="RemoveAlbumAsync_RemovesOnlyRequestedAlbum_AndReportsMissingOnes" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.LibraryServiceTests.AddAlbumAsync_DuplicateForSameUser_Throws_AndKeepsSingleEntry" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="218f00f7-5259-b3f6-3e0e-8b36041926b3">
+      <Execution id="2ec9953b-b077-4cbc-9d1e-c39f31773f1b" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.LibraryServiceTests" name="AddAlbumAsync_DuplicateForSameUser_Throws_AndKeepsSingleEntry" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.HealthEndpointsTests.Live_ReturnsHealthy_WithoutCheckingDependencies" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="6b09d6be-db86-2529-2acd-991334e86c38">
+      <Execution id="18d4af3b-5162-46a6-bbc1-c16cb7117b63" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.HealthEndpointsTests" name="Live_ReturnsHealthy_WithoutCheckingDependencies" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests.GetAlbumAsync_WhenDeezerReportsNoData_ThrowsNotFound" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="9f61ffc6-ddc6-f3bf-8601-7773b0183b54">
+      <Execution id="19319b53-ae35-49e7-86cd-f9ac601fbfd8" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.DeezerAlbumProviderTests" name="GetAlbumAsync_WhenDeezerReportsNoData_ThrowsNotFound" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.LibraryApiTests.SearchAlbums_UnknownProvider_Returns400ProblemDetails" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="6fce4e0c-83af-5bc5-c06f-f66340ab633c">
+      <Execution id="00178d1a-045e-4c17-a460-2b12feab0767" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.LibraryApiTests" name="SearchAlbums_UnknownProvider_Returns400ProblemDetails" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.HealthEndpointsTests.Ready_ReturnsHealthy_WithDatabaseCheck" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="bac41cd2-b0ab-33db-ef49-e1a1bb3cf36f">
+      <Execution id="e4d83efb-e1fa-4bca-97cd-ad798afa5a56" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.HealthEndpointsTests" name="Ready_ReturnsHealthy_WithDatabaseCheck" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests.GetAlbumAsync_UnknownId_ThrowsNotFound" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="d6d08b75-7c53-5c93-22d0-ffb77f465512">
+      <Execution id="027dc21e-eea0-4fd7-acd8-78667647804b" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.FakeSpotifyAlbumProviderTests" name="GetAlbumAsync_UnknownId_ThrowsNotFound" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests.GetRequired_UnknownProvider_Throws" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="6253d7a7-f78f-d453-b5b3-4d19fddcc5bd">
+      <Execution id="4a4db9f4-7b4d-479b-b160-af9ef6b871e6" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Unit.AlbumProviderFactoryTests" name="GetRequired_UnknownProvider_Throws" />
+    </UnitTest>
+    <UnitTest name="MusicAlbums.Tests.Integration.LibraryApiTests.SearchAlbums_WithSpotifyProvider_UsesFakeSpotifyStrategy" storage="d:\programmingprojects\linkfiretechint\tests\musicalbums.tests\bin\debug\net10.0\musicalbums.tests.dll" id="3e545880-fa56-78f8-cec9-f81ae12b0c72">
+      <Execution id="2c86e2ea-8e77-4ed1-878e-9ec8125aefaf" />
+      <TestMethod codeBase="D:\ProgrammingProjects\LinkFireTechInt\tests\MusicAlbums.Tests\bin\Debug\net10.0\MusicAlbums.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="MusicAlbums.Tests.Integration.LibraryApiTests" name="SearchAlbums_WithSpotifyProvider_UsesFakeSpotifyStrategy" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="2ff5ef8b-1c82-f892-42c4-3da94984acf1" executionId="3fe34e6b-8e97-4962-96f1-0f33d690a9d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc77c6f8-c3a4-c1ed-3d67-91b0c0b83f60" executionId="a8e1b53e-3556-46f4-903c-575e7493f6ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65e6d1c5-ecf0-424d-1fab-af60ca104a44" executionId="0918dc14-27e4-4f37-b639-4132dca323a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0501bd90-c931-5f09-3482-7252dab7a81e" executionId="fbd49266-2586-440e-9d2f-c304f983734b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df569aeb-e789-27f2-9085-5ac51009d879" executionId="89c9ca64-abda-453d-b658-d8004b218842" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="253408ca-2ff2-580d-c6fa-bbc3c432ccf8" executionId="f3a04dbb-af3a-462a-8c7d-a370ecfcc59c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09e94dc6-8c22-f6a0-3dac-10fe805226ab" executionId="d7cb6aed-14a7-42a6-8bf2-1111c31736ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca9b035c-73d8-82d8-452c-c4880f73b9a8" executionId="aac0f31d-1ec9-4708-9f20-b45020728be8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e545880-fa56-78f8-cec9-f81ae12b0c72" executionId="2c86e2ea-8e77-4ed1-878e-9ec8125aefaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e7e8772-8b13-31bf-33af-0e31b77099c5" executionId="ec5b933f-23c6-4dc7-9368-2c8ff47d984a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f61ffc6-ddc6-f3bf-8601-7773b0183b54" executionId="19319b53-ae35-49e7-86cd-f9ac601fbfd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d50c3ec9-c9a1-40ff-eb44-009fc2e0a01a" executionId="c67b25a6-4c66-4554-bf21-aa7eb17d2535" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="97c57fd3-fd3d-34a1-8e0a-28182a191802" executionId="44bbfc5c-1b91-43ac-8e26-3571f34aee95" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="208239fb-182e-84ee-321b-46c020c4d8e4" executionId="1daea3bd-9fa0-442e-97de-cc621cc3b1bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6fce4e0c-83af-5bc5-c06f-f66340ab633c" executionId="00178d1a-045e-4c17-a460-2b12feab0767" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b90b80a-aaf1-6308-35d2-a09202e1427e" executionId="fb99cf49-bb86-4450-8c09-22e2109bf6f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47dbbc3a-7d07-7768-8e3c-4e8352909900" executionId="9810faa7-5429-4769-8ccc-1ea1a88fa455" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e0e098f0-bf7a-47fa-3de8-30aa3f9df368" executionId="b6541dde-5fc5-4097-802a-22be0f4a780f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="099e40eb-b228-8b05-299a-8cf80b19ef23" executionId="d66a311c-9599-424f-b5c1-8c699df351e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="319246c0-5730-5276-f64e-08fc205a2b7a" executionId="805099b0-96ae-483d-8dd4-6b2f75eea810" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="218f00f7-5259-b3f6-3e0e-8b36041926b3" executionId="2ec9953b-b077-4cbc-9d1e-c39f31773f1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bac41cd2-b0ab-33db-ef49-e1a1bb3cf36f" executionId="e4d83efb-e1fa-4bca-97cd-ad798afa5a56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6253d7a7-f78f-d453-b5b3-4d19fddcc5bd" executionId="4a4db9f4-7b4d-479b-b160-af9ef6b871e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2ebae0f1-cc49-7a82-ff06-e77c1a2b7662" executionId="452ac613-af7c-4033-9877-e496f4f22875" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fefb342b-d419-b5d1-66b7-fe17009e4fc7" executionId="3eda7046-0f81-470c-a240-b45c2a1f2477" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6d08b75-7c53-5c93-22d0-ffb77f465512" executionId="027dc21e-eea0-4fd7-acd8-78667647804b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1387f44-4f73-df22-1ab8-594d3b456297" executionId="d8af5959-0b4f-4ebf-8e6b-0a64a77529c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b09d6be-db86-2529-2acd-991334e86c38" executionId="18d4af3b-5162-46a6-bbc1-c16cb7117b63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23042865-519d-464e-1531-3a853834a1d3" executionId="ef5dd1fe-a2b2-4e35-8080-9f3289590216" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ef1432f0-083e-7a8d-75b6-74fccc667d6f" executionId="b44b5885-5cfa-4c58-acad-13177452d7d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="30" executed="30" passed="30" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.8)&#xD;
+[xUnit.net 00:00:00.10]   Discovering: MusicAlbums.Tests&#xD;
+[xUnit.net 00:00:00.14]   Discovered:  MusicAlbums.Tests&#xD;
+[xUnit.net 00:00:00.16]   Starting:    MusicAlbums.Tests&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20411]&#xD;
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (&#xD;
+          "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,&#xD;
+          "Timestamp" TEXT NOT NULL&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (&#xD;
+          "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,&#xD;
+          "Timestamp" TEXT NOT NULL&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-09-28 08:08:03.16941+00:00');&#xD;
+      SELECT changes();&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-09-28 08:08:03.1694105+00:00');&#xD;
+      SELECT changes();&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (&#xD;
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,&#xD;
+          "ProductVersion" TEXT NOT NULL&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (&#xD;
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,&#xD;
+          "ProductVersion" TEXT NOT NULL&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "MigrationId", "ProductVersion"&#xD;
+      FROM "__EFMigrationsHistory"&#xD;
+      ORDER BY "MigrationId";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "MigrationId", "ProductVersion"&#xD;
+      FROM "__EFMigrationsHistory"&#xD;
+      ORDER BY "MigrationId";&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20260928072125_InitialCreate'.&#xD;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]&#xD;
+      Applying migration '20260928072125_InitialCreate'.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "Users" (&#xD;
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY,&#xD;
+          "Name" TEXT COLLATE NOCASE NOT NULL,&#xD;
+          "CreatedAt" INTEGER NOT NULL&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "Users" (&#xD;
+          "Id" TEXT NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY,&#xD;
+          "Name" TEXT COLLATE NOCASE NOT NULL,&#xD;
+          "CreatedAt" INTEGER NOT NULL&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "SavedAlbums" (&#xD;
+          "Id" TEXT NOT NULL CONSTRAINT "PK_SavedAlbums" PRIMARY KEY,&#xD;
+          "UserId" TEXT NOT NULL,&#xD;
+          "ProviderName" TEXT NOT NULL,&#xD;
+          "ProviderAlbumId" TEXT NOT NULL,&#xD;
+          "Title" TEXT NOT NULL,&#xD;
+          "ArtistName" TEXT NOT NULL,&#xD;
+          "ReleaseDate" TEXT NULL,&#xD;
+          "CoverImageUrl" TEXT NULL,&#xD;
+          "TrackCount" INTEGER NULL,&#xD;
+          "SavedAt" INTEGER NOT NULL,&#xD;
+          CONSTRAINT "FK_SavedAlbums_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "SavedAlbums" (&#xD;
+          "Id" TEXT NOT NULL CONSTRAINT "PK_SavedAlbums" PRIMARY KEY,&#xD;
+          "UserId" TEXT NOT NULL,&#xD;
+          "ProviderName" TEXT NOT NULL,&#xD;
+          "ProviderAlbumId" TEXT NOT NULL,&#xD;
+          "Title" TEXT NOT NULL,&#xD;
+          "ArtistName" TEXT NOT NULL,&#xD;
+          "ReleaseDate" TEXT NULL,&#xD;
+          "CoverImageUrl" TEXT NULL,&#xD;
+          "TrackCount" INTEGER NULL,&#xD;
+          "SavedAt" INTEGER NOT NULL,&#xD;
+          CONSTRAINT "FK_SavedAlbums_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "SavedTracks" (&#xD;
+          "Id" TEXT NOT NULL CONSTRAINT "PK_SavedTracks" PRIMARY KEY,&#xD;
+          "SavedAlbumId" TEXT NOT NULL,&#xD;
+          "Position" INTEGER NOT NULL,&#xD;
+          "Title" TEXT NOT NULL,&#xD;
+          "DurationSeconds" INTEGER NULL,&#xD;
+          CONSTRAINT "FK_SavedTracks_SavedAlbums_SavedAlbumId" FOREIGN KEY ("SavedAlbumId") REFERENCES "SavedAlbums" ("Id") ON DELETE CASCADE&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE TABLE "SavedTracks" (&#xD;
+          "Id" TEXT NOT NULL CONSTRAINT "PK_SavedTracks" PRIMARY KEY,&#xD;
+          "SavedAlbumId" TEXT NOT NULL,&#xD;
+          "Position" INTEGER NOT NULL,&#xD;
+          "Title" TEXT NOT NULL,&#xD;
+          "DurationSeconds" INTEGER NULL,&#xD;
+          CONSTRAINT "FK_SavedTracks_SavedAlbums_SavedAlbumId" FOREIGN KEY ("SavedAlbumId") REFERENCES "SavedAlbums" ("Id") ON DELETE CASCADE&#xD;
+      );&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE UNIQUE INDEX "IX_SavedAlbums_UserId_ProviderName_ProviderAlbumId" ON "SavedAlbums" ("UserId", "ProviderName", "ProviderAlbumId");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE UNIQUE INDEX "IX_SavedAlbums_UserId_ProviderName_ProviderAlbumId" ON "SavedAlbums" ("UserId", "ProviderName", "ProviderAlbumId");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE INDEX "IX_SavedTracks_SavedAlbumId" ON "SavedTracks" ("SavedAlbumId");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE INDEX "IX_SavedTracks_SavedAlbumId" ON "SavedTracks" ("SavedAlbumId");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE UNIQUE INDEX "IX_Users_Name" ON "Users" ("Name");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      CREATE UNIQUE INDEX "IX_Users_Name" ON "Users" ("Name");&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")&#xD;
+      VALUES ('20260928072125_InitialCreate', '10.0.12');&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")&#xD;
+      VALUES ('20260928072125_InitialCreate', '10.0.12');&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      DELETE FROM "__EFMigrationsLock";&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']&#xD;
+      DELETE FROM "__EFMigrationsLock";&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: D:\ProgrammingProjects\LinkFireTechInt\src\MusicAlbums.Api&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: D:\ProgrammingProjects\LinkFireTechInt\src\MusicAlbums.Api&#xD;
+info: MusicAlbums.Api.ErrorHandling.MusicAlbumsExceptionHandler[0]&#xD;
+      Request failed with 400: Album provider 'napster' is not registered.&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[100]&#xD;
+      Start processing HTTP request GET https://api.deezer.com/search/album?*&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[100]&#xD;
+      Sending HTTP request GET https://api.deezer.com/search/album?*&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[101]&#xD;
+      Received HTTP response headers after 0.5631ms - 200&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[101]&#xD;
+      End processing HTTP request after 10.4448ms - 200&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (3ms) [Parameters=[@name='?' (Size = 42)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."Id", "u"."CreatedAt", "u"."Name"&#xD;
+      FROM "Users" AS "u"&#xD;
+      WHERE "u"."Name" = @name&#xD;
+      LIMIT 1&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[100]&#xD;
+      Start processing HTTP request GET https://api.deezer.com/album/302127&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[100]&#xD;
+      Sending HTTP request GET https://api.deezer.com/album/302127&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[101]&#xD;
+      Received HTTP response headers after 0.0098ms - 200&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[101]&#xD;
+      End processing HTTP request after 0.0677ms - 200&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Guid), @providerName='?' (Size = 6), @providerAlbumId='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "SavedAlbums" AS "s"&#xD;
+          WHERE "s"."UserId" = @userId AND "s"."ProviderName" = @providerName AND "s"."ProviderAlbumId" = @providerAlbumId)&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int64), @p2='?' (Size = 42)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "Users" ("Id", "CreatedAt", "Name")&#xD;
+      VALUES (@p0, @p1, @p2);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 9), @p2='?' (Size = 65), @p3='?' (Size = 6), @p4='?' (Size = 6), @p5='?' (DbType = Date), @p6='?' (DbType = Int64), @p7='?' (Size = 9), @p8='?' (DbType = Int32), @p9='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "SavedAlbums" ("Id", "ArtistName", "CoverImageUrl", "ProviderAlbumId", "ProviderName", "ReleaseDate", "SavedAt", "Title", "TrackCount", "UserId")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Guid), @p4='?' (Size = 13)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "SavedTracks" ("Id", "DurationSeconds", "Position", "SavedAlbumId", "Title")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Guid), @p4='?' (Size = 11)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "SavedTracks" ("Id", "DurationSeconds", "Position", "SavedAlbumId", "Title")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Guid), @p4='?' (Size = 12)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "SavedTracks" ("Id", "DurationSeconds", "Position", "SavedAlbumId", "Title")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Guid), @p4='?' (Size = 32)], CommandType='Text', CommandTimeout='30']&#xD;
+      INSERT INTO "SavedTracks" ("Id", "DurationSeconds", "Position", "SavedAlbumId", "Title")&#xD;
+      VALUES (@p0, @p1, @p2, @p3, @p4);&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@name='?' (Size = 42)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."Id", "u"."CreatedAt", "u"."Name"&#xD;
+      FROM "Users" AS "u"&#xD;
+      WHERE "u"."Name" = @name&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "s"."Id", "s"."ArtistName", "s"."CoverImageUrl", "s"."ProviderAlbumId", "s"."ProviderName", "s"."ReleaseDate", "s"."SavedAt", "s"."Title", "s"."TrackCount", "s"."UserId", "s0"."Id", "s0"."DurationSeconds", "s0"."Position", "s0"."SavedAlbumId", "s0"."Title"&#xD;
+      FROM "SavedAlbums" AS "s"&#xD;
+      LEFT JOIN "SavedTracks" AS "s0" ON "s"."Id" = "s0"."SavedAlbumId"&#xD;
+      WHERE "s"."UserId" = @userId&#xD;
+      ORDER BY "s"."SavedAt" DESC, "s"."Id", "s0"."Position"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@name='?' (Size = 42)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."Id", "u"."CreatedAt", "u"."Name"&#xD;
+      FROM "Users" AS "u"&#xD;
+      WHERE "u"."Name" = @name&#xD;
+      LIMIT 1&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[100]&#xD;
+      Start processing HTTP request GET https://api.deezer.com/album/302127&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[100]&#xD;
+      Sending HTTP request GET https://api.deezer.com/album/302127&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[101]&#xD;
+      Received HTTP response headers after 0.0129ms - 200&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[101]&#xD;
+      End processing HTTP request after 0.0613ms - 200&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Guid), @providerName='?' (Size = 6), @providerAlbumId='?' (Size = 6)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT EXISTS (&#xD;
+          SELECT 1&#xD;
+          FROM "SavedAlbums" AS "s"&#xD;
+          WHERE "s"."UserId" = @userId AND "s"."ProviderName" = @providerName AND "s"."ProviderAlbumId" = @providerAlbumId)&#xD;
+info: MusicAlbums.Api.ErrorHandling.MusicAlbumsExceptionHandler[0]&#xD;
+      Request failed with 409: Album '302127' from provider 'deezer' is already in the library.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@name='?' (Size = 42)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."Id", "u"."CreatedAt", "u"."Name"&#xD;
+      FROM "Users" AS "u"&#xD;
+      WHERE "u"."Name" = @name&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Guid), @albumId='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "s1"."Id", "s1"."ArtistName", "s1"."CoverImageUrl", "s1"."ProviderAlbumId", "s1"."ProviderName", "s1"."ReleaseDate", "s1"."SavedAt", "s1"."Title", "s1"."TrackCount", "s1"."UserId", "s0"."Id", "s0"."DurationSeconds", "s0"."Position", "s0"."SavedAlbumId", "s0"."Title"&#xD;
+      FROM (&#xD;
+          SELECT "s"."Id", "s"."ArtistName", "s"."CoverImageUrl", "s"."ProviderAlbumId", "s"."ProviderName", "s"."ReleaseDate", "s"."SavedAt", "s"."Title", "s"."TrackCount", "s"."UserId"&#xD;
+          FROM "SavedAlbums" AS "s"&#xD;
+          WHERE "s"."UserId" = @userId AND "s"."Id" = @albumId&#xD;
+          LIMIT 1&#xD;
+      ) AS "s1"&#xD;
+      LEFT JOIN "SavedTracks" AS "s0" ON "s1"."Id" = "s0"."SavedAlbumId"&#xD;
+      ORDER BY "s1"."Id", "s0"."Position"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      DELETE FROM "SavedTracks"&#xD;
+      WHERE "Id" = @p0&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      DELETE FROM "SavedTracks"&#xD;
+      WHERE "Id" = @p0&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      DELETE FROM "SavedTracks"&#xD;
+      WHERE "Id" = @p0&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      DELETE FROM "SavedTracks"&#xD;
+      WHERE "Id" = @p0&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      DELETE FROM "SavedAlbums"&#xD;
+      WHERE "Id" = @p0&#xD;
+      RETURNING 1;&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@name='?' (Size = 42)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."Id", "u"."CreatedAt", "u"."Name"&#xD;
+      FROM "Users" AS "u"&#xD;
+      WHERE "u"."Name" = @name&#xD;
+      LIMIT 1&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "s"."Id", "s"."ArtistName", "s"."CoverImageUrl", "s"."ProviderAlbumId", "s"."ProviderName", "s"."ReleaseDate", "s"."SavedAt", "s"."Title", "s"."TrackCount", "s"."UserId", "s0"."Id", "s0"."DurationSeconds", "s0"."Position", "s0"."SavedAlbumId", "s0"."Title"&#xD;
+      FROM "SavedAlbums" AS "s"&#xD;
+      LEFT JOIN "SavedTracks" AS "s0" ON "s"."Id" = "s0"."SavedAlbumId"&#xD;
+      WHERE "s"."UserId" = @userId&#xD;
+      ORDER BY "s"."SavedAt" DESC, "s"."Id", "s0"."Position"&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@name='?' (Size = 37)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."Id", "u"."CreatedAt", "u"."Name"&#xD;
+      FROM "Users" AS "u"&#xD;
+      WHERE "u"."Name" = @name&#xD;
+      LIMIT 1&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[100]&#xD;
+      Start processing HTTP request GET https://api.deezer.com/album/999999999999&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[100]&#xD;
+      Sending HTTP request GET https://api.deezer.com/album/999999999999&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.ClientHandler[101]&#xD;
+      Received HTTP response headers after 0.005ms - 200&#xD;
+info: System.Net.Http.HttpClient.DeezerAlbumProvider.LogicalHandler[101]&#xD;
+      End processing HTTP request after 0.0394ms - 200&#xD;
+info: MusicAlbums.Api.ErrorHandling.MusicAlbumsExceptionHandler[0]&#xD;
+      Request failed with 404: Album '999999999999' was not found in provider 'deezer'.&#xD;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]&#xD;
+      Executed DbCommand (0ms) [Parameters=[@name='?' (Size = 40)], CommandType='Text', CommandTimeout='30']&#xD;
+      SELECT "u"."Id", "u"."CreatedAt", "u"."Name"&#xD;
+      FROM "Users" AS "u"&#xD;
+      WHERE "u"."Name" = @name&#xD;
+      LIMIT 1&#xD;
+info: MusicAlbums.Api.ErrorHandling.MusicAlbumsExceptionHandler[0]&#xD;
+      Request failed with 404: Library user 'missing-be378cdbb7bb44f2a18579d72df3844b' was not found.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:01.54]   Finished:    MusicAlbums.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

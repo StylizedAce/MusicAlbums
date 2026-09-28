@@ -15,7 +15,9 @@ between sessions. Update it whenever a meaningful decision changes.
 | [05-api-reference.md](05-api-reference.md) | Endpoints, request/response examples, status codes |
 | [06-testing-strategy.md](06-testing-strategy.md) | What is tested where, how to run, live smoke test |
 | [07-decision-log.md](07-decision-log.md) | Running log of decisions and their rationale |
+| [08-docker.md](08-docker.md) | Container image, compose stack, secrets and run guide |
 | [verification/V1-verification.md](verification/V1-verification.md) | V1 test evidence: 27/27 automated + live Deezer E2E |
+| [verification/V2-verification.md](verification/V2-verification.md) | V2 test evidence: 30/30 automated + native/container E2E |
 
 ## Ground rules captured here
 

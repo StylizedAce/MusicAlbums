@@ -52,17 +52,49 @@ required. `GET /api/providers` automatically lists the new provider.
 | Provider | Status | Notes |
 | --- | --- | --- |
 | `deezer` | Real | Public REST API, no credentials (see 03-deezer-integration.md) |
-| `spotify` | Fake | Contract-first in-memory catalogue; deterministic for demos and tests |
+| `spotify` | Fake, switch ready | `FakeSpotifyAlbumProvider` behind `AlbumProviders:Spotify:Mode`; real adapter in V3 |
 
-## Spotify roadmap (when credentials are available)
+## Spotify provider mode switch (V2)
+
+Configuration (`AlbumProviders:Spotify`):
+
+```json
+{
+  "Mode": "Fake",
+  "AccountsBaseUrl": "https://accounts.spotify.com/",
+  "ApiBaseUrl": "https://api.spotify.com/v1/"
+}
+```
+
+- `Mode=Fake` (default): the deterministic in-memory catalogue serves requests.
+  Credentials are not required.
+- `Mode=Api`: startup validation requires `ClientId`/`ClientSecret`, and then the
+  app **fails fast** with a clear message - the real adapter arrives in V3. There
+  is deliberately no silent fallback to the fake.
+
+Credentials never live in git. Local development uses user-secrets on the API
+project (already initialized with a `UserSecretsId`):
+
+```powershell
+dotnet user-secrets set "AlbumProviders:Spotify:ClientId" "<id>" --project src/MusicAlbums.Api
+dotnet user-secrets set "AlbumProviders:Spotify:ClientSecret" "<secret>" --project src/MusicAlbums.Api
+```
+
+Containers/host: `AlbumProviders__Spotify__ClientId` and
+`AlbumProviders__Spotify__ClientSecret` environment variables (V3 syncs a
+gitignored `.env` through TuxComp).
+
+## Spotify roadmap (V3, credentials available)
 
 Spotify requires OAuth 2.0 **client credentials**:
 
-1. Create an app at https://developer.spotify.com/dashboard (free).
-2. Copy `ClientId` / `ClientSecret` (store in user-secrets, never in git).
-3. Implement `SpotifyAlbumProvider` with a typed `HttpClient`:
-   - Token: `POST https://accounts.spotify.com/api/token` with
-     `grant_type=client_credentials` (Basic auth) - cache the token until expiry.
-   - Search: `GET https://api.spotify.com/v1/search?q={q}&type=album&limit&offset`
-   - Detail: `GET https://api.spotify.com/v1/albums/{id}`
-4. Map the payloads to `ProviderAlbum` and keep the fake for tests via DI.
+1. App registration on the Spotify dashboard (already done; copy the secret into
+   user-secrets/env, never into the repo).
+2. Implement the real `SpotifyAlbumProvider` with a typed `HttpClient`:
+   - Token: `POST {AccountsBaseUrl}api/token` with `grant_type=client_credentials`
+     (Basic auth) - cache the token until expiry.
+   - Search: `GET {ApiBaseUrl}search?q={q}&type=album&limit&offset`
+   - Detail: `GET {ApiBaseUrl}albums/{id}`
+3. Replace the fail-fast branch in `DependencyInjection` with the typed-client
+   registration and update the fail-fast test in `SpotifyConfigurationTests`.
+4. Map payloads to `ProviderAlbum`; keep the fake for tests via DI.

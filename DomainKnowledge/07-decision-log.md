@@ -26,3 +26,9 @@ alternatives considered.
 | 19 | `dotnet-ef` pinned as a repo-local tool (`dotnet-tools.json`) | Reproducible migrations; no machine-level install | Global tool install |
 | 20 | `Microsoft.OpenApi` pinned to 2.12.2 | Transitive 2.0.0 from the template had advisory GHSA-v5pm-xwqc-g5wc; 2.x line keeps compatibility | Upgrade to 3.x (breaking) |
 | 21 | Auto-apply migrations at startup | Fresh clone runs with one command; fine for a SQLite-backed service | `dotnet ef database update` step in deployment |
+| 22 | Spotify provider chosen via `AlbumProviders:Spotify:Mode` with credentials from user-secrets/env | One codebase demonstrates both strategies; secrets never in git | Separate builds/configs per provider |
+| 23 | `Mode=Api` fails fast at startup until the V3 adapter exists | Fail loudly beats silently serving fake data | Fallback to fake with a warning; implement real Spotify in V2 |
+| 24 | Health split into `/health/live` and `/health/ready` (ready checks SQLite) | Orchestrator-friendly: liveness never depends on the DB | Single `/health` with DB check |
+| 25 | Container runtime: non-root `app`, curl installed for healthchecks, `/data` pre-owned by `app` | Least privilege + a healthcheck that actually validates HTTP, named volume writable by non-root | Root user; bash `/dev/tcp` check; bind mount |
+| 26 | Compose project name pinned to `musicalbums`, host port `5080:8080` | Stable container/volume names for TuxComp; matches local docs | Directory-derived project name; port 8080 on host |
+| 27 | Tiny-delivery commits: each commit independently verified (build + tests; container E2E for the Docker delivery) | Interview-ready workflow; no untested code in history | One big-bang commit per version |

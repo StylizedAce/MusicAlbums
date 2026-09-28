@@ -31,6 +31,19 @@ dotnet run --project src/MusicAlbums.Api --launch-profile http
 
 The SQLite database is created and migrated automatically on startup.
 
+Or run it in a container (image runs as non-root with a persisted named volume):
+
+```powershell
+docker compose up --build
+# -> http://localhost:5080, health at /health/live and /health/ready
+```
+
+Run the E2E smoke test (works against native and container hosts):
+
+```powershell
+.\scripts\smoke.ps1 -BaseUrl http://localhost:5080
+```
+
 ## Example flow
 
 ```powershell
@@ -46,6 +59,7 @@ More requests: `src/MusicAlbums.Api/MusicAlbums.Api.http`.
 
 | Method | Route |
 | --- | --- |
+| GET | `/health/live`, `/health/ready` |
 | GET | `/api/providers` |
 | GET | `/api/albums/search?q=&provider=&limit=&offset=` |
 | GET | `/api/albums/{provider}/{providerAlbumId}` |
@@ -60,4 +74,4 @@ ProblemDetails.
 
 See [DomainKnowledge/README.md](DomainKnowledge/README.md) for the architecture,
 the `IAlbumProvider` contract, Deezer quirks, persistence details, testing
-strategy, and the running decision log.
+strategy, the running decision log, and the [Docker guide](DomainKnowledge/08-docker.md).
