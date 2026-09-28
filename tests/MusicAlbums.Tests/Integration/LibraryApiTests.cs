@@ -39,6 +39,7 @@ public sealed class LibraryApiTests(MusicAlbumsApiFactory factory) : IClassFixtu
         Assert.Equal("Discovery", saved["title"]!.GetValue<string>());
         Assert.Equal("Daft Punk", saved["artist"]!.GetValue<string>());
         Assert.Equal("2001-03-07", saved["releaseDate"]!.GetValue<string>());
+        Assert.Equal("https://www.deezer.com/album/302127", saved["externalUrl"]!.GetValue<string>());
         var albumId = saved["id"]!.GetValue<Guid>();
         Assert.Equal($"/api/users/{user}/library/{albumId}", saveResponse.Headers.Location!.ToString());
 

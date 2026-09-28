@@ -9,5 +9,6 @@ public sealed record SavedAlbumResponse(
     DateOnly? ReleaseDate,
     string? CoverImageUrl,
     int? TrackCount,
+    string? ExternalUrl,
     DateTimeOffset SavedAt,
     IReadOnlyList<TrackResponse> Tracks);

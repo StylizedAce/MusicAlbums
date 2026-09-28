@@ -29,6 +29,7 @@ public sealed class SpotifyApiModeEndToEndTests
         var first = albums[0]!;
         Assert.Equal("Discovery", first["title"]!.GetValue<string>());
         Assert.Equal("https://i.scdn.co/image/large-cover.jpg", first["coverImageUrl"]!.GetValue<string>());
+        Assert.Equal("https://open.spotify.com/album/sp-1", first["externalUrl"]!.GetValue<string>());
 
         var saveResponse = await client.PostAsJsonAsync($"/api/users/{user}/library", new { provider = "spotify", providerAlbumId = "sp-1" });
         Assert.Equal(HttpStatusCode.Created, saveResponse.StatusCode);

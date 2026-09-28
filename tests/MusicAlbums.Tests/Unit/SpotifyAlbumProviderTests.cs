@@ -32,6 +32,7 @@ public sealed class SpotifyAlbumProviderTests
         Assert.Equal("Discovery", album.Title);
         Assert.Equal("Daft Punk", album.ArtistName);
         Assert.Equal("https://i.scdn.co/image/large-cover.jpg", album.CoverImageUrl);
+        Assert.Equal("https://open.spotify.com/album/sp-1", album.ExternalUrl);
         Assert.Equal(new DateOnly(2001, 3, 7), album.ReleaseDate);
         Assert.Equal(14, album.TrackCount);
         Assert.Empty(album.Tracks);
@@ -46,6 +47,7 @@ public sealed class SpotifyAlbumProviderTests
         var album = await provider.GetAlbumAsync("sp-1");
 
         Assert.Equal("Random Access Memories", album.Title);
+        Assert.Equal("https://open.spotify.com/album/sp-1", album.ExternalUrl);
         Assert.Equal(new DateOnly(2013, 5, 1), album.ReleaseDate);
         Assert.Equal(2, album.Tracks.Count);
         Assert.Equal(1, album.Tracks[0].Position);

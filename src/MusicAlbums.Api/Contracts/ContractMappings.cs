@@ -15,6 +15,7 @@ internal static class ContractMappings
             album.ReleaseDate,
             album.CoverImageUrl,
             album.TrackCount,
+            album.ExternalUrl,
             [.. album.Tracks.Select(track => track.ToResponse())]);
 
     public static SearchAlbumsResponse ToResponse(this AlbumSearchResult result) =>
@@ -29,6 +30,7 @@ internal static class ContractMappings
             album.ReleaseDate,
             album.CoverImageUrl,
             album.TrackCount,
+            album.ExternalUrl,
             album.SavedAt,
             [.. album.Tracks.Select(track => new TrackResponse(track.Position, track.Title, track.DurationSeconds, track.PreviewUrl))]);
 }

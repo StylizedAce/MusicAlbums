@@ -22,6 +22,8 @@ public sealed class SavedAlbum
 
     public int? TrackCount { get; set; }
 
+    public string? ExternalUrl { get; set; }
+
     public DateTimeOffset SavedAt { get; set; }
 
     public List<SavedTrack> Tracks { get; set; } = [];
@@ -42,6 +44,7 @@ public sealed class SavedAlbum
             ReleaseDate = album.ReleaseDate,
             CoverImageUrl = album.CoverImageUrl,
             TrackCount = album.TrackCount ?? (album.Tracks.Count > 0 ? album.Tracks.Count : null),
+            ExternalUrl = album.ExternalUrl,
             SavedAt = savedAt,
             Tracks = [.. album.Tracks.Select(track => new SavedTrack
             {

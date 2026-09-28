@@ -19,6 +19,7 @@ internal static class SpotifyTestData
                 "release_date": "2001-03-07",
                 "release_date_precision": "day",
                 "total_tracks": 14,
+                "external_urls": { "spotify": "https://open.spotify.com/album/sp-1" },
                 "images": [
                   { "url": "https://i.scdn.co/image/small-cover.jpg", "width": 64, "height": 64 },
                   { "url": "https://i.scdn.co/image/large-cover.jpg", "width": 640, "height": 640 }
@@ -31,6 +32,7 @@ internal static class SpotifyTestData
                 "release_date": "1997-05-28",
                 "release_date_precision": "day",
                 "total_tracks": 12,
+                "external_urls": { "spotify": "https://open.spotify.com/album/sp-2" },
                 "images": [],
                 "artists": [ { "id": "a-2", "name": "Radiohead" } ]
               }
@@ -47,6 +49,7 @@ internal static class SpotifyTestData
           "release_date": "2013-05",
           "release_date_precision": "month",
           "total_tracks": 13,
+          "external_urls": { "spotify": "https://open.spotify.com/album/sp-1" },
           "images": [
             { "url": "https://i.scdn.co/image/ram-cover.jpg", "width": 640, "height": 640 }
           ],

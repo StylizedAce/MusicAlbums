@@ -11,31 +11,31 @@ public sealed class FakeSpotifyAlbumProvider : IAlbumProvider
 
     private static readonly IReadOnlyList<ProviderAlbum> Catalog =
     [
-        new(ProviderNames.Spotify, "alb-001", "Discovery", "Daft Punk", new DateOnly(2001, 3, 7), null, 14,
+        new(ProviderNames.Spotify, "alb-001", "Discovery", "Daft Punk", new DateOnly(2001, 3, 7), null, 14, "https://open.spotify.com/album/alb-001",
         [
             new ProviderTrack(1, "One More Time", 320),
             new ProviderTrack(2, "Aerodynamic", 212),
             new ProviderTrack(3, "Digital Love", 301),
             new ProviderTrack(4, "Harder, Better, Faster, Stronger", 224)
         ]),
-        new(ProviderNames.Spotify, "alb-002", "Random Access Memories", "Daft Punk", new DateOnly(2013, 5, 17), null, 13,
+        new(ProviderNames.Spotify, "alb-002", "Random Access Memories", "Daft Punk", new DateOnly(2013, 5, 17), null, 13, "https://open.spotify.com/album/alb-002",
         [
             new ProviderTrack(1, "Get Lucky", 369),
             new ProviderTrack(2, "Instant Crush", 337),
             new ProviderTrack(3, "Lose Yourself to Dance", 353)
         ]),
-        new(ProviderNames.Spotify, "alb-003", "OK Computer", "Radiohead", new DateOnly(1997, 5, 28), null, 12,
+        new(ProviderNames.Spotify, "alb-003", "OK Computer", "Radiohead", new DateOnly(1997, 5, 28), null, 12, "https://open.spotify.com/album/alb-003",
         [
             new ProviderTrack(1, "Paranoid Android", 383),
             new ProviderTrack(2, "Karma Police", 261),
             new ProviderTrack(3, "No Surprises", 229)
         ]),
-        new(ProviderNames.Spotify, "alb-004", "Kid A", "Radiohead", new DateOnly(2000, 10, 2), null, 10,
+        new(ProviderNames.Spotify, "alb-004", "Kid A", "Radiohead", new DateOnly(2000, 10, 2), null, 10, "https://open.spotify.com/album/alb-004",
         [
             new ProviderTrack(1, "Everything In Its Right Place", 251),
             new ProviderTrack(2, "Idioteque", 309)
         ]),
-        new(ProviderNames.Spotify, "alb-005", "Thriller", "Michael Jackson", new DateOnly(1982, 11, 30), null, 9,
+        new(ProviderNames.Spotify, "alb-005", "Thriller", "Michael Jackson", new DateOnly(1982, 11, 30), null, 9, "https://open.spotify.com/album/alb-005",
         [
             new ProviderTrack(1, "Wanna Be Startin' Somethin'", 363),
             new ProviderTrack(2, "Thriller", 358),

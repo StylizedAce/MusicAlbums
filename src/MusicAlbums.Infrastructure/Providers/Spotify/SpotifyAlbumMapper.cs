@@ -33,6 +33,7 @@ internal static class SpotifyAlbumMapper
             ParseReleaseDate(album.ReleaseDate, album.ReleaseDatePrecision),
             coverImageUrl,
             album.TotalTracks,
+            album.ExternalUrls?.Spotify,
             tracks);
     }
 

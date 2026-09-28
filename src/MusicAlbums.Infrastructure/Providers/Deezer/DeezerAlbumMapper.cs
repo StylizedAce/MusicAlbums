@@ -26,6 +26,7 @@ internal static class DeezerAlbumMapper
             ParseReleaseDate(album.ReleaseDate),
             album.CoverXl ?? album.CoverBig,
             album.NbTracks,
+            album.Link,
             tracks);
     }
 

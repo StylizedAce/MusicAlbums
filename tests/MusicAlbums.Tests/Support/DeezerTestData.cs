@@ -13,6 +13,7 @@ internal static class DeezerTestData
             {
               "id": 302127,
               "title": "Discovery",
+              "link": "https://www.deezer.com/album/302127",
               "cover_xl": "https://cdn-images.dzcdn.net/images/cover/discovery/1000x1000.jpg",
               "nb_tracks": 14,
               "artist": { "id": 27, "name": "Daft Punk" }
@@ -26,6 +27,7 @@ internal static class DeezerTestData
         {
           "id": 302127,
           "title": "Discovery",
+          "link": "https://www.deezer.com/album/302127",
           "cover_xl": "https://cdn-images.dzcdn.net/images/cover/discovery/1000x1000.jpg",
           "nb_tracks": 14,
           "release_date": "2001-03-07",

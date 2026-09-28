@@ -31,6 +31,7 @@ public sealed class DeezerAlbumProviderTests
         Assert.Equal("Discovery", album.Title);
         Assert.Equal("Daft Punk", album.ArtistName);
         Assert.Equal("https://cdn-images.dzcdn.net/images/cover/discovery/1000x1000.jpg", album.CoverImageUrl);
+        Assert.Equal("https://www.deezer.com/album/302127", album.ExternalUrl);
         Assert.Equal(14, album.TrackCount);
         Assert.Null(album.ReleaseDate);
         Assert.Empty(album.Tracks);

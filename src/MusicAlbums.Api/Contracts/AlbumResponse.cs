@@ -8,4 +8,5 @@ public sealed record AlbumResponse(
     DateOnly? ReleaseDate,
     string? CoverImageUrl,
     int? TrackCount,
+    string? ExternalUrl,
     IReadOnlyList<TrackResponse> Tracks);

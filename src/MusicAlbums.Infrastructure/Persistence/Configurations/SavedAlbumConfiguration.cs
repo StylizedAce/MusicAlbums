@@ -31,6 +31,9 @@ public sealed class SavedAlbumConfiguration : IEntityTypeConfiguration<SavedAlbu
         builder.Property(album => album.CoverImageUrl)
             .HasMaxLength(1000);
 
+        builder.Property(album => album.ExternalUrl)
+            .HasMaxLength(1000);
+
         builder.Property(album => album.SavedAt)
             .HasConversion(savedAt => savedAt.UtcTicks, ticks => new DateTimeOffset(ticks, TimeSpan.Zero));
 

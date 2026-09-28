@@ -10,6 +10,7 @@ internal sealed record DeezerSearchResponse(
 internal sealed record DeezerAlbumDto(
     [property: JsonPropertyName("id")] long Id,
     [property: JsonPropertyName("title")] string? Title,
+    [property: JsonPropertyName("link")] string? Link,
     [property: JsonPropertyName("cover_xl")] string? CoverXl,
     [property: JsonPropertyName("cover_big")] string? CoverBig,
     [property: JsonPropertyName("nb_tracks")] int? NbTracks,

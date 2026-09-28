@@ -32,6 +32,7 @@ public sealed class LibraryServiceTests : IDisposable
         Assert.Equal("Discovery", saved.Title);
         Assert.Equal("Daft Punk", saved.ArtistName);
         Assert.Equal(new DateOnly(2001, 3, 7), saved.ReleaseDate);
+        Assert.Equal("https://www.deezer.com/album/album-1", saved.ExternalUrl);
         Assert.Equal(2, saved.TrackCount);
         Assert.Equal(Now, saved.SavedAt);
         Assert.Equal(2, saved.Tracks.Count);
@@ -120,6 +121,7 @@ public sealed class LibraryServiceTests : IDisposable
             new DateOnly(2001, 3, 7),
             "https://cover.example/x.jpg",
             2,
+            $"https://www.deezer.com/album/{id}",
             [
                 new ProviderTrack(1, "Track One", 100, "https://preview.example/track-one.mp3"),
                 new ProviderTrack(2, "Track Two", 200)

@@ -20,9 +20,13 @@ internal sealed record SpotifyAlbumDto(
     [property: JsonPropertyName("release_date")] string? ReleaseDate,
     [property: JsonPropertyName("release_date_precision")] string? ReleaseDatePrecision,
     [property: JsonPropertyName("total_tracks")] int? TotalTracks,
+    [property: JsonPropertyName("external_urls")] SpotifyExternalUrlsDto? ExternalUrls,
     [property: JsonPropertyName("images")] IReadOnlyList<SpotifyImageDto>? Images,
     [property: JsonPropertyName("artists")] IReadOnlyList<SpotifyArtistDto>? Artists,
     [property: JsonPropertyName("tracks")] SpotifyTrackPage? Tracks);
+
+internal sealed record SpotifyExternalUrlsDto(
+    [property: JsonPropertyName("spotify")] string? Spotify);
 
 internal sealed record SpotifyImageDto(
     [property: JsonPropertyName("url")] string? Url,

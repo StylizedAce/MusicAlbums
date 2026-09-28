@@ -8,4 +8,5 @@ public sealed record ProviderAlbum(
     DateOnly? ReleaseDate,
     string? CoverImageUrl,
     int? TrackCount,
+    string? ExternalUrl,
     IReadOnlyList<ProviderTrack> Tracks);
