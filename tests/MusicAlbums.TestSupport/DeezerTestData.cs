@@ -7,6 +7,26 @@ public static class DeezerTestData
 {
     public const string DiscoveryAlbumId = "302127";
 
+    public const string SecondAlbumId = "6575789";
+
+    public const string SecondAlbumDetailJson = """
+        {
+          "id": 6575789,
+          "title": "Random Access Memories",
+          "link": "https://www.deezer.com/album/6575789",
+          "cover_xl": "https://cdn-images.dzcdn.net/images/cover/ram/1000x1000.jpg",
+          "nb_tracks": 2,
+          "release_date": "2013-05-17",
+          "artist": { "id": 27, "name": "Daft Punk" },
+          "tracks": {
+            "data": [
+              { "id": 1, "title": "Get Lucky", "duration": 369, "preview": "https://cdns-preview.dzcdn.net/stream/get-lucky.mp3" },
+              { "id": 2, "title": "Instant Crush", "duration": 337, "preview": null }
+            ]
+          }
+        }
+        """;
+
     public const string SearchResponseJson = """
         {
           "data": [
@@ -55,6 +75,7 @@ public static class DeezerTestData
         {
             "/search/album" => Json(SearchResponseJson),
             $"/album/{DiscoveryAlbumId}" => Json(AlbumDetailJson),
+            $"/album/{SecondAlbumId}" => Json(SecondAlbumDetailJson),
             _ when path.StartsWith("/album/", StringComparison.Ordinal) => Json(NoDataErrorJson),
             _ => new HttpResponseMessage(HttpStatusCode.NotFound)
         };

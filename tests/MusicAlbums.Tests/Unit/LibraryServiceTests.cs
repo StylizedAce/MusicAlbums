@@ -88,11 +88,13 @@ public sealed class LibraryServiceTests : IDisposable
     }
 
     [Fact]
-    public async Task GetLibraryAsync_UnknownUser_Throws()
+    public async Task GetLibraryAsync_UnknownUser_ReturnsEmptyLibrary()
     {
         var service = CreateService();
 
-        await Assert.ThrowsAsync<UserNotFoundException>(() => service.GetLibraryAsync("nobody"));
+        var library = await service.GetLibraryAsync("nobody");
+
+        Assert.Empty(library);
     }
 
     [Fact]

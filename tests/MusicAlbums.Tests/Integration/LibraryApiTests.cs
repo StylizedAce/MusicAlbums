@@ -111,11 +111,13 @@ public sealed class LibraryApiTests(MusicAlbumsApiFactory factory) : IClassFixtu
     }
 
     [Fact]
-    public async Task GetLibrary_UnknownUser_Returns404ProblemDetails()
+    public async Task GetLibrary_UnknownUser_ReturnsEmptyLibrary()
     {
         var response = await _client.GetAsync($"/api/users/missing-{Guid.NewGuid():N}/library");
 
-        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
-        Assert.Equal("application/problem+json", response.Content.Headers.ContentType?.MediaType);
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+        var library = JsonNode.Parse(await response.Content.ReadAsStringAsync())!.AsArray();
+        Assert.Empty(library);
     }
 }

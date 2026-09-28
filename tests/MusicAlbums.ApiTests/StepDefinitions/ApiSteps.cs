@@ -93,6 +93,16 @@ public sealed class ApiSteps(ScenarioContext scenarioContext)
         Assert.Empty(library);
     }
 
+    [Then("the library is empty")]
+    public void ThenTheLibraryIsEmpty() => Assert.Empty(_json!.AsArray());
+
+    [Then("the library contains (.*) albums?")]
+    public void ThenTheLibraryContains(int count) => Assert.Equal(count, _json!.AsArray().Count);
+
+    [Then("the first library album title is \"(.*)\"")]
+    public void ThenTheFirstLibraryAlbumTitleIs(string title) =>
+        Assert.Equal(title, _json!.AsArray()[0]!["title"]!.GetValue<string>());
+
     [When("I request health endpoint \"(.*)\"")]
     public Task WhenIRequestHealthEndpoint(string path) => GetAsync(path);
 

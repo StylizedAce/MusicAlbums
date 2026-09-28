@@ -37,8 +37,13 @@ public sealed class LibraryService(
 
     public async Task<IReadOnlyList<SavedAlbum>> GetLibraryAsync(string userName, CancellationToken cancellationToken = default)
     {
-        var user = await FindUserAsync(userName, cancellationToken);
-        return await savedAlbumRepository.GetByUserAsync(user.Id, cancellationToken);
+        ArgumentException.ThrowIfNullOrWhiteSpace(userName);
+
+        var user = await userRepository.FindByNameAsync(userName.Trim(), cancellationToken);
+
+        return user is null
+            ? []
+            : await savedAlbumRepository.GetByUserAsync(user.Id, cancellationToken);
     }
 
     public async Task<SavedAlbum> GetAlbumAsync(string userName, Guid albumId, CancellationToken cancellationToken = default)

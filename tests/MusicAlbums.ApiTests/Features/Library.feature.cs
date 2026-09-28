@@ -105,7 +105,7 @@ namespace MusicAlbums.ApiTests.Features
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/Library.feature.ndjson", 7);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/Library.feature.ndjson", 8);
         }
         
         async global::System.Threading.Tasks.Task global::Xunit.IAsyncLifetime.InitializeAsync()
@@ -269,15 +269,15 @@ namespace MusicAlbums.ApiTests.Features
             await this.ScenarioCleanupAsync();
         }
         
-        [global::Xunit.SkippableFactAttribute(DisplayName="Libraries are isolated between users")]
+        [global::Xunit.SkippableFactAttribute(DisplayName="Unknown users have an empty library")]
         [global::Xunit.TraitAttribute("FeatureTitle", "Personal album library")]
-        [global::Xunit.TraitAttribute("Description", "Libraries are isolated between users")]
-        public async global::System.Threading.Tasks.Task LibrariesAreIsolatedBetweenUsers()
+        [global::Xunit.TraitAttribute("Description", "Unknown users have an empty library")]
+        public async global::System.Threading.Tasks.Task UnknownUsersHaveAnEmptyLibrary()
         {
             string[] tagsOfScenario = ((string[])(null));
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "4";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Libraries are isolated between users", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Unknown users have an empty library", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
 #line 24
@@ -291,13 +291,53 @@ namespace MusicAlbums.ApiTests.Features
             {
                 await this.ScenarioStartAsync();
 #line 25
-    await testRunner.WhenAsync("I save provider \"deezer\" album \"302127\" for user \"frank\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+    await testRunner.WhenAsync("I request the library of \"newcomer\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 26
-    await testRunner.AndAsync("I request the library of \"grace\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+    await testRunner.ThenAsync("the response status is 200", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
 #line 27
-    await testRunner.ThenAsync("the response status is 404", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+    await testRunner.AndAsync("the library is empty", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::Xunit.SkippableFactAttribute(DisplayName="Libraries are isolated between users")]
+        [global::Xunit.TraitAttribute("FeatureTitle", "Personal album library")]
+        [global::Xunit.TraitAttribute("Description", "Libraries are isolated between users")]
+        public async global::System.Threading.Tasks.Task LibrariesAreIsolatedBetweenUsers()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "5";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Libraries are isolated between users", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 29
+  this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 30
+    await testRunner.WhenAsync("I save provider \"deezer\" album \"302127\" for user \"frank\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 31
+    await testRunner.AndAsync("I save provider \"deezer\" album \"6575789\" for user \"grace\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 32
+    await testRunner.AndAsync("I request the library of \"grace\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 33
+    await testRunner.ThenAsync("the library contains 1 album", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 34
+    await testRunner.AndAsync("the first library album title is \"Random Access Memories\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

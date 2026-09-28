@@ -21,7 +21,14 @@ Feature: Personal album library
     When I save provider "deezer" album "999999999999" for user "erin"
     Then the response status is 404
 
+  Scenario: Unknown users have an empty library
+    When I request the library of "newcomer"
+    Then the response status is 200
+    And the library is empty
+
   Scenario: Libraries are isolated between users
     When I save provider "deezer" album "302127" for user "frank"
+    And I save provider "deezer" album "6575789" for user "grace"
     And I request the library of "grace"
-    Then the response status is 404
+    Then the library contains 1 album
+    And the first library album title is "Random Access Memories"
