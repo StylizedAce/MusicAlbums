@@ -1,0 +1,26 @@
+name: musicalbums
+
+services:
+  api:
+    build:
+      context: .
+    image: musicalbums-api:local
+    container_name: musicalbums-api
+    ports:
+      - "5080:8080"
+    environment:
+      - "ConnectionStrings__Library=Data Source=/data/musicalbums.db"
+      - "AlbumProviders__Default=deezer"
+      - "AlbumProviders__Spotify__Mode=Fake"
+    volumes:
+      - musicalbums-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8080/health/live"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 15s
+
+volumes:
+  musicalbums-data:

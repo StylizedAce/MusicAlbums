@@ -1,0 +1,15 @@
+.git
+.gitignore
+.vs
+.idea
+**/bin
+**/obj
+*.db
+*.db-shm
+*.db-wal
+.env
+DomainKnowledge
+tests
+MusicAlbums.slnx
+dotnet-tools.json
+README.md
