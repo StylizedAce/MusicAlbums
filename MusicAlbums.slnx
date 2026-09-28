@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MusicAlbums.Api/MusicAlbums.Api.csproj" />
+    <Project Path="src/MusicAlbums.Core/MusicAlbums.Core.csproj" />
+    <Project Path="src/MusicAlbums.Infrastructure/MusicAlbums.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MusicAlbums.Tests/MusicAlbums.Tests.csproj" />
+  </Folder>
+</Solution>
