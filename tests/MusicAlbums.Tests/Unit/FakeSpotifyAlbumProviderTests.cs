@@ -4,9 +4,9 @@ using MusicAlbums.Infrastructure.Providers.Spotify;
 
 namespace MusicAlbums.Tests.Unit;
 
-public sealed class SpotifyAlbumProviderTests
+public sealed class FakeSpotifyAlbumProviderTests
 {
-    private readonly SpotifyAlbumProvider _provider = new();
+    private readonly FakeSpotifyAlbumProvider _provider = new();
 
     [Fact]
     public async Task SearchAlbumsAsync_MatchesArtistOrTitle_CaseInsensitively()

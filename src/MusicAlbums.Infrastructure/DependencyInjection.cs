@@ -34,6 +34,15 @@ public static class DependencyInjection
             .Validate(options => options.TimeoutSeconds > 0, "AlbumProviders:Deezer:TimeoutSeconds must be positive.")
             .ValidateOnStart();
 
+        services.AddOptions<SpotifyOptions>()
+            .Bind(configuration.GetSection(SpotifyOptions.SectionName))
+            .Validate(options => Uri.TryCreate(options.AccountsBaseUrl, UriKind.Absolute, out _), "AlbumProviders:Spotify:AccountsBaseUrl must be an absolute URI.")
+            .Validate(options => Uri.TryCreate(options.ApiBaseUrl, UriKind.Absolute, out _), "AlbumProviders:Spotify:ApiBaseUrl must be an absolute URI.")
+            .Validate(options => options.Mode != SpotifyProviderMode.Api
+                || (!string.IsNullOrWhiteSpace(options.ClientId) && !string.IsNullOrWhiteSpace(options.ClientSecret)),
+                "AlbumProviders:Spotify:ClientId and ClientSecret are required when Mode is 'Api'.")
+            .ValidateOnStart();
+
         services.AddHttpClient<DeezerAlbumProvider>((serviceProvider, client) =>
         {
             var options = serviceProvider.GetRequiredService<IOptions<DeezerOptions>>().Value;
@@ -42,7 +51,18 @@ public static class DependencyInjection
         });
 
         services.AddTransient<IAlbumProvider>(serviceProvider => serviceProvider.GetRequiredService<DeezerAlbumProvider>());
-        services.AddSingleton<IAlbumProvider>(new SpotifyAlbumProvider());
+
+        var spotifyOptions = configuration.GetSection(SpotifyOptions.SectionName).Get<SpotifyOptions>() ?? new SpotifyOptions();
+
+        if (spotifyOptions.Mode == SpotifyProviderMode.Fake)
+        {
+            services.AddSingleton<IAlbumProvider, FakeSpotifyAlbumProvider>();
+        }
+        else
+        {
+            throw new InvalidOperationException(
+                "AlbumProviders:Spotify:Mode=Api is not implemented yet and arrives in V3. Set Mode=Fake or wait for the real Spotify adapter.");
+        }
 
         services.AddTransient<IAlbumProviderFactory, AlbumProviderFactory>();
 

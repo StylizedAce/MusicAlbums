@@ -5,7 +5,7 @@ using MusicAlbums.Core.Models;
 
 namespace MusicAlbums.Infrastructure.Providers.Spotify;
 
-public sealed class SpotifyAlbumProvider : IAlbumProvider
+public sealed class FakeSpotifyAlbumProvider : IAlbumProvider
 {
     public string Name => ProviderNames.Spotify;
 
